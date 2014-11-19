@@ -1,0 +1,220 @@
+/* Site */
+body {
+  background: #ffffff url(../img/bg_dark.png);
+  font-size: 20px;
+  color: #333;
+}
+
+h1 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 140px;
+  color: #FE563B;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0px;
+  line-height: 115px;
+}
+
+#menu {
+  background-color: #FE563B;
+  margin: -13px auto 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+#menu > ul {
+  text-align: center;
+  list-style: none;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+#menu > ul > a > li {
+  float: left;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 45px;
+  color: black;
+  padding: 10px 50px;
+}
+.whiteContainer {
+  background-color: white;
+}
+a:hover{text-decoration: none;}
+
+h3 {
+  font-size: 22px;
+}
+h3 a{
+  color: black;
+}
+
+.flexslider{
+  border: none;
+  border-radius: none;
+}
+.heading_dots {
+  background: url(/img/heading_dots_grey.png) repeat-x center;
+}
+.heading_supersize {
+  font-size: 74px;
+  text-align: center;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 10px;
+}
+.heading_center_bg {
+background: #FFF;
+padding: 0 10px;
+}
+p.welcome_text {
+  font-size: 180%;
+  text-align: center;
+  font-weight: normal;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+p.small_front{
+  text-align: center;
+}
+.basic_text>img{
+  max-width: 20%;
+  margin: 0px 10px;
+}
+.maxWidth{
+  max-width: 95%;
+}
+
+.sponsor { padding-bottom: 5px; margin-bottom: 5px; border-bottom: 1px dotted #333; }
+.sponsor a {color: #333;}
+
+
+#footerContainer{ background-color: #FE563B;}
+.footText{color: white; text-align: center; }
+
+.table-striped>tbody>tr:nth-child(odd) {
+background-color: #ddd;
+}
+
+.Bronze{color: rgb(140, 120, 83); text-align: center; border-radius: 5px;}
+.Silver{color: rgb(192, 192, 192); text-align: center; border-radius: 5px;}
+.Gold{color: rgb(225, 215, 0); text-align: center; border-radius: 5px;}
+.Platinum{color: rgb(229, 228, 226); text-align: center; border-radius: 5px;}
+.hX{background-color: #555;}
+
+.bX{padding: 10px; height: 115px; }
+.bBronze{background-color: rgb(140, 120, 83); text-align: center;  border-radius: 5px;}
+.bSilver{background-color: rgb(192, 192, 192); text-align: center;  border-radius: 5px;}
+.bGold{background-color: rgb(225, 215, 0); text-align: center;  border-radius: 5px;}
+.bPlatinum{background-color: rgb(229, 228, 226); text-align: center;  border-radius: 5px;}
+
+.sponsorList{
+  height: 235px;
+  list-style: none;
+  padding-left: 4px;
+}
+h2.level{
+  margin: 5px 0px 10px;
+  padding: 5px 10px 5px;;
+  border: 1px solid black;
+  background-color: #FFA68B;
+}
+div.sponsorIndent{
+  padding-left: 1.5em;
+  text-indent:-1.5em;
+}
+
+@media(max-width:1199px) {
+  #menu > ul > a > li {
+    padding: 10px 40px;
+  }
+  .heading_supersize{
+    font-size: 65px;
+  }
+}
+
+@media(max-width:1024px) {
+  #menu > ul > a > li {
+    padding: 10px 30px;
+  }
+}
+
+@media(max-width:991px) {
+  #menu > ul > a > li {
+    font-size: 40px;
+    padding: 10px 20px;
+  }
+  h1{
+    font-size: 110px;
+  }
+  #menu {
+    margin: -25px auto 0px;
+  }
+  .heading_supersize {
+    font-size: 50px;
+  }
+  .basic_text>img {
+    max-width: 30%;
+    margin: 0px 10px;
+  }
+}
+
+@media(max-width:768px) {
+  #menu > ul > a > li {
+    font-size: 30px;
+    padding: 10px 20px;
+  }
+  h1{
+    font-size: 90px;
+  }
+  #menu {
+    margin: -33px auto 0px;
+  }
+  .heading_supersize {
+    font-size: 40px;
+  }
+}
+
+@media(max-width:640px) {
+  #menu > ul > a > li {
+    font-size: 23px;
+    padding: 0px 20px;
+    width: 100%;
+  }
+  h1{
+    font-size: 70px;
+  }
+  #menu {
+    margin: -41px auto 0px;
+  }
+  .heading_supersize {
+    font-size: 40px;
+  }
+  .heading_dots{
+    background-image: none;
+  }
+  .basic_text>img {
+    max-width: 40%;
+    margin: 0px 10px;
+  }
+}
+
+@media(max-width:480px) {
+  h1{
+    font-size: 50px;
+  }
+  #menu {
+    margin: -53px auto 0px;
+  }
+  .heading_supersize {
+    font-size: 30px;
+  }
+}
+
+@media(max-width:360px) {
+  h1{
+    font-size: 40px;
+  }
+  .heading_supersize {
+    font-size: 25px;
+  }
+}

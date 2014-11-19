@@ -1,0 +1,36 @@
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript
+</IfModule>
+
+# BEGIN Caching
+<ifModule mod_headers.c>
+<filesMatch "\\.(ico|pdf|flv|jpg|jpeg|png|gif|swf|woff)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+<filesMatch "\\.(css)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+<filesMatch "\\.(js)$">
+Header set Cache-Control "max-age=604800, private"
+</filesMatch>
+<filesMatch "\\.(xml|txt)$">
+Header set Cache-Control "max-age=604800, public, must-revalidate"
+</filesMatch>
+<filesMatch "\\.(html|htm|php)$">
+Header set Cache-Control "max-age=1, private, must-revalidate"
+</filesMatch>
+</ifModule>
+# END Caching
+
+# For security reasons, Option followsymlinks cannot be overridden.
+#Options +FollowSymlinks
+Options +SymLinksIfOwnerMatch
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www.valleyhackathon.com$ [NC]
+RewriteRule ^(.*)$ http://valleyhackathon.com/$1 [R=301,L]
+
+#rewrite the url to insert index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php/%{REQUEST_URI}
