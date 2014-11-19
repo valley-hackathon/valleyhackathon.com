@@ -43,37 +43,39 @@ $data['teams'][] = array('Name'=>'Guinea Pigs', 'Frameworks'=>'', 'Members'=>'Ed
 $data['teams'][] = array('Name'=>'Team 4', 'Frameworks'=>'', 'Members'=>'Mat Wood<br>Brian Blocher<br>James Williams', 'County'=>'Tuolumne');
 
 
-$data['individuals'][] = array('Name'=>'Bradley Giesbrecht', 'Frameworks'=>'Angular.js / Mapping', 'County'=>'Stanislaus');
+// $data['individuals'][] = array('Name'=>'Bradley Giesbrecht', 'Frameworks'=>'Angular.js / Mapping', 'County'=>'Stanislaus');
 
 $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 // Define routes
 $app->get('/', function () use ($app) {
   global $data;
-  $data['title'] = 'Valley Hackaton';
+  $data['title'] = 'Valley Hackathon';
   $data['description'] = 'Valley Hackathon is a locals only hackathon designed to show local employers that there are high quality programmers right here in the Central Valley of California.';
   $data['h1'] = 'Turlock Hackathon';
   $app->render('index.html', $data);
 });
 $app->get('/about', function () use ($app) {
   global $data;
-  $data['title'] = 'About Valley Hackaton';
+  $data['title'] = 'About Valley Hackathon';
   $data['description'] = '';
   $data['h1'] = 'About the Valley Hackathon';
   $app->render('about.html', $data);
 });
 $app->get('/sponsors', function () use ($app) {
   global $data;
-  $data['title'] = 'Sponsors of Valley Hackaton';
+  $data['title'] = 'Sponsors of Valley Hackathon';
   $data['description'] = 'Sponsors of Valley Hackathon are all local companies involved in technology in one way or another.';
-  $data['h1'] = 'Aponsors of the Valley Hackaton';
+  $data['h1'] = 'Aponsors of the Valley Hackathon';
   $app->render('sponsors.html', $data);
 });
 $app->get('/signup', function () use ($app) {
   global $data;
-  $data['title'] = 'Signup for Valley Hackaton';
+  $data['title'] = 'Signup for Valley Hackathon';
   $data['description'] = 'Sign up for the Valley Hackathon ';
   $data['h1'] = 'Signup for the Event';
   $app->render('signup.html', $data);
+});
+$app->get('/speed-test', function () use ($app) {
 });
 // Run app
 $app->run();
