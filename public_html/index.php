@@ -43,8 +43,6 @@ $data['teams'][] = array('Name'=>'Guinea Pigs', 'Frameworks'=>'', 'Members'=>'Ed
 $data['teams'][] = array('Name'=>'Team 4', 'Frameworks'=>'', 'Members'=>'Mat Wood<br>Brian Blocher<br>James Williams', 'County'=>'Tuolumne');
 
 
-// $data['individuals'][] = array('Name'=>'Bradley Giesbrecht', 'Frameworks'=>'Angular.js / Mapping', 'County'=>'Stanislaus');
-
 $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 // Define routes
 $app->get('/', function () use ($app) {

@@ -36,34 +36,4 @@
 
     </div>
   </div>
-  <div col="row">
-    <div col="col-md-12">
-      <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Individuals</span></h2></div>
-    </div>
-  </div>
-  <div col="row">
-    <div col="col-md-12">
-      <table class="table table-condensed table-striped">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Project Type</th>
-            <th>County Represented</th>
-            <th>Project Link</th>
-          </tr>
-        </thead>
-        <tbody>
-        {% for t in individuals %}
-          <tr>
-            <td>{{t.Name}}</td>
-            <td>{{t.Frameworks}}</td>
-            <td>{{t.County|raw}}</td>
-            <td>{% if t.URL %}<a href="http://{{t.URL}}">{% if t.ProjectPic %}<img class="projectImage" src="/img/project/{{t.ProjectPic}}">{% else %}{{t.Name}}{% endif %}</a>{% else %}Coming Soon{% endif %}</td>
-          </tr>
-        {% endfor %}
-        </tbody>
-      </table>
-
-    </div>
-  </div>
 {% include 'footer.html' %}
