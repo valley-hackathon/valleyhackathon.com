@@ -13,7 +13,7 @@ HASH=`git log --pretty=format:'%h' -n 1`
 # Set the worktree
 WORKTREE=/home/valleyh/production/$HASH
 
-echo "\e[0;32mCloning bare repo...\e[0m"
+echo $'\e[1G'"\e[0;32mCloning bare repo...\e[0m"
 
 # Clone the repo
 git clone /home/valleyh/app.git $WORKTREE
@@ -21,7 +21,7 @@ git clone /home/valleyh/app.git $WORKTREE
 # cd into it
 cd $WORKTREE
 
-echo "\e[0;32mInstalling Composer dependencies...\e[0m"
+echo $'\e[1G'"\e[0;32mInstalling Composer dependencies...\e[0m"
 
 # Install all the composer dependencies
 composer install
@@ -30,11 +30,11 @@ composer install
 find . -type d -print0 | xargs -0 chmod 0755 # for directories
 find . -type f -print0 | xargs -0 chmod 0644 # for files
 
-echo "\e[0;32mSymlinking public_html...\e[0m"
+echo $'\e[1G'"\e[0;32mSymlinking public_html...\e[0m"
 
 # Remove the current public_html symlink
 # And link the new one
 rm /home/valleyh/public_html
 ln -s $WORKTREE/public_html /home/valleyh/public_html
 
-echo "\e[0;32mDone!\e[0m"
+echo $'\e[1G'"\e[0;32mDone!\e[0m"
