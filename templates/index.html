@@ -45,25 +45,25 @@
 </div>
 
 <script language="javascript" type="text/javascript">
-(function($) {
-	$(window).load(function() {
-		$('.sponsorRow').each(function(){
-  		var row = $(this);
-  		var mht = 0;
-  		row.find('.sponsorLogo').each(function(){
-    		if ($(this).height() > mht) mht = $(this).height();
-  		});
-  		row.find('.sponsorLogo').each(function(){
-    		if ($(this).height() < mht){
-      		px = (mht - $(this).height())/2;
-      		console.log(px);
-      		$(this).css('padding-top', px+'px');
-      		$(this).css('padding-bottom', px+'px');
-    		}
-  		});
-		})
-	});
-})(jQuery);
+//(function($) {
+//	$(window).load(function() {
+//		$('.sponsorRow').each(function(){
+//  		var row = $(this);
+//  		var mht = 0;
+//  		row.find('.sponsorLogo').each(function(){
+//    		if ($(this).height() > mht) mht = $(this).height();
+//  		});
+//  		row.find('.sponsorLogo').each(function(){
+//    		if ($(this).height() < mht){
+//      		px = (mht - $(this).height())/2;
+//      		console.log(px);
+//      		$(this).css('padding-top', px+'px');
+//      		$(this).css('padding-bottom', px+'px');
+//    		}
+//  		});
+//		})
+//	});
+//})(jQuery);
 </script>
 
 {% include 'footer.html' %}
