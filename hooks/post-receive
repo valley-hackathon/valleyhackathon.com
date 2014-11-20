@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# Post receive hooks for the server environment
+#  - Copies the lastest commit to a hashed directory,
+#  - Installs dependencies
+#  - Symlinks the current revision to the public_html directory
+#
+#########
+
+# Get the last hash (will be used for the directory name)
+HASH=`git log --pretty=format:'%h' -n 1`
+
+# Set the worktree
+WORKTREE=/home/valleyh/production/$HASH
+
+# Clone the repo
+git clone /home/valleyh/app.git $WORKTREE
+
+# cd into it
+cd $WORKTREE
+
+# Install all the composer dependencies
+composer install
+
+# Make sure the permissions are correct
+find . -type d -print0 | xargs -0 chmod 0755 # for directories
+find . -type f -print0 | xargs -0 chmod 0644 # for files
+
+# Remove the current public_html symlink
+# And link the new one
+rm /home/valleyh/public_html
+ln -s $WORKTREE/public_html /home/valleyh/public_html
