@@ -162,6 +162,9 @@ $data['teams'][] = array(
   'County'     => 'Tuolumne'
 );
 
+// Get the current git hash
+$data['current_hash'] = array_slice(explode('/', __DIR__), -2, 1)[0];
+
 $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 
 /**
