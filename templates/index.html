@@ -1,70 +1,46 @@
 {% include 'header.html' %}
-<div class="flexslider">
-  <ul class="slides">
-    <li>
-      <img src="/img/SanFrancisco.jpg" />
-    </li>
-    <li>
-      <img src="/img/NewYork.jpg" />
-    </li>
-    <li>
-      <img src="/img/Mumbai.jpg" />
-    </li>
-    <li>
-      <img src="/img/Turlock.jpg" />
-    </li>
-  </ul>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Valley Hackathon</span></h2></div>
-    <p class="welcome_text">There are serious programmers living in the Central Valley and serious employers too.  Let's do this thing.</p>
-    <p class="small_front">join us on #valleyhackathon on freenode</p>
+  <div class="flexslider">
+    <ul class="slides">
+      <li>
+        <img src="/img/SanFrancisco.jpg" />
+      </li>
+      <li>
+        <img src="/img/NewYork.jpg" />
+      </li>
+      <li>
+        <img src="/img/Mumbai.jpg" />
+      </li>
+      <li>
+        <img src="/img/Turlock.jpg" />
+      </li>
+    </ul>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Sponsors</span></h2></div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Valley Hackathon</span></h2></div>
+      <p class="welcome_text">There are serious programmers living in the Central Valley and serious employers too.  Let's do this thing.</p>
+      <p class="small_front">join us on #valleyhackathon on freenode</p>
+    </div>
   </div>
-</div>
-
-<div class="row sponsorRow">
-{% for s in sponsors %}
-  {% if loop.index0 % 3 ==0 and loop.index0 > 0 %}
-</div>
-<div class="row sponsorRow">
-  {% endif %}
-  <div class="col-md-4">
-    <a href="http://{{s.URL}}">
-      <img src="img/{{s.Logo}}" alt="{{s.Name}}" class="maxWidth sponsorLogo">
-      <h3>{{s.Name}}</h3>
-    </a>
-    <p><em>{{s.Description}}</em></p>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Sponsors</span></h2></div>
+    </div>
   </div>
-{% endfor %}
-</div>
 
-<script language="javascript" type="text/javascript">
-//(function($) {
-//	$(window).load(function() {
-//		$('.sponsorRow').each(function(){
-//  		var row = $(this);
-//  		var mht = 0;
-//  		row.find('.sponsorLogo').each(function(){
-//    		if ($(this).height() > mht) mht = $(this).height();
-//  		});
-//  		row.find('.sponsorLogo').each(function(){
-//    		if ($(this).height() < mht){
-//      		px = (mht - $(this).height())/2;
-//      		console.log(px);
-//      		$(this).css('padding-top', px+'px');
-//      		$(this).css('padding-bottom', px+'px');
-//    		}
-//  		});
-//		})
-//	});
-//})(jQuery);
-</script>
-
+  <div class="row sponsorRow">
+  {% for s in sponsors %}
+    {% if loop.index0 % 3 ==0 and loop.index0 > 0 %}
+  </div>
+  <div class="row sponsorRow">
+    {% endif %}
+    <div class="col-md-4">
+      <a href="http://{{s.URL}}">
+        <img src="img/{{s.Logo}}" alt="{{s.Name}}" class="maxWidth sponsorLogo">
+        <h3>{{s.Name}}</h3>
+      </a>
+      <p><em>{{s.Description}}</em></p>
+    </div>
+  {% endfor %}
+  </div>
 {% include 'footer.html' %}
-
