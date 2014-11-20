@@ -38,19 +38,19 @@
     {% for s in sponsorship %}
     <div class="col-sm-3 col-md-3">
       <div class="well">
-    		<h2 class="{{s.Name}} hX">{{s.Name}}</h2>
-    		<hr>
-    		<h3 class="b{{s.Name}} bX">{{s.Commitment|raw}}</h3>
-    		<hr>
-    		<ul class="sponsorList">
-    			<li><i class="fa fa-gavel"></i>&nbsp;Judges: {{s.Judges}}</li>
-    			<li><i class="fa fa-clock-o"></i>&nbsp;Access: {{s.Access|raw}}</li>
-    			<li><i class="fa fa-microphone"></i>&nbsp;Introduction at the welcome event: {{s.Introduction|raw}}</li>
-    			{% if s.Surprize %}
-    			<li><i class="fa fa-star"></i>&nbsp;Surprize: {{s.Surprize|raw}}</li>
-    			{% endif %}
-    		</ul>
-    	</div>
+        <h2 class="{{s.Name}} hX">{{s.Name}}</h2>
+        <hr>
+        <h3 class="b{{s.Name}} bX">{{s.Commitment|raw}}</h3>
+        <hr>
+        <ul class="sponsorList">
+          <li><i class="fa fa-gavel"></i>&nbsp;Judges: {{s.Judges}}</li>
+          <li><i class="fa fa-clock-o"></i>&nbsp;Access: {{s.Access|raw}}</li>
+          <li><i class="fa fa-microphone"></i>&nbsp;Introduction at the welcome event: {{s.Introduction|raw}}</li>
+          {% if s.Surprize %}
+          <li><i class="fa fa-star"></i>&nbsp;Surprize: {{s.Surprize|raw}}</li>
+          {% endif %}
+        </ul>
+      </div>
     </div>
 
     {% endfor %}
