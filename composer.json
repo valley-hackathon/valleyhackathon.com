@@ -1,9 +1,9 @@
 {
-    "require": {
-        "slim/slim": "2.*",
-        "slim/views": "0.1.*",
-        "slim/extras": "*",
-        "twig/twig": "1.*",
-        "components/jquery": "1.*"
-    }
+  "require": {
+    "slim/slim": "2.*",
+    "slim/views": "0.1.*",
+    "slim/extras": "*",
+    "twig/twig": "1.*",
+    "components/jquery": "1.*"
+  }
 }
