@@ -79,12 +79,12 @@ $data['sponsors'][] = array(
   'Text'        => 'We are stoked about having these guys as a sponsor, and even more so about having Scott Smith as a judge!'
 );
 $data['sponsors'][] = array(
-  'Level' => 'Bronze Sponsor',
-  'Name' => 'DataBoost',
-  'URL' => 'databoost.com',
-  'Logo' => 'databoost.png',
+  'Level'       => 'Bronze Sponsor',
+  'Name'        => 'DataBoost',
+  'URL'         => 'databoost.com',
+  'Logo'        => 'databoost.png',
   'Description' => 'Data Marketing Application Development and Hosting Solutions.',
-  'Text' => 'These guys are going to be providing breakfast,
+  'Text'        => 'These guys are going to be providing breakfast,
   we love breakfast therefore we love them. :-)'
 );
 $data['sponsors'][] = array(
@@ -160,6 +160,12 @@ $data['teams'][] = array(
   'Frameworks' => '',
   'Members'    => 'Mat Wood<br>Brian Blocher<br>James Williams',
   'County'     => 'Tuolumne'
+);
+$data['teams'][] = array(
+  'Name'       => 'Team 5',
+  'Frameworks' => 'React/Node.js',
+  'Members'    => 'Bryan Garza,<br>Mario Muniz,<br>Brett Martin,<br>Annie Yang',
+  'County'     => 'Stanislaus'
 );
 
 // Get the current git hash
