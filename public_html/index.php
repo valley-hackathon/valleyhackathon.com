@@ -164,7 +164,7 @@ $data['teams'][] = array(
 $data['teams'][] = array(
   'Name'       => 'Team 5',
   'Frameworks' => 'React/Node.js',
-  'Members'    => 'Bryan Garza,<br>Mario Muniz,<br>Brett Martin,<br>Annie Yang',
+  'Members'    => 'Bryan Garza<br>Mario Muniz<br>Brett Martin<br>Annie Yang',
   'County'     => 'Stanislaus'
 );
 
