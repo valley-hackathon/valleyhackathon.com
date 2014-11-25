@@ -95,22 +95,31 @@ p.small_front{
 background-color: #ddd;
 }
 
-.Bronze{color: rgb(140, 120, 83); text-align: center; border-radius: 5px;}
-.Silver{color: rgb(192, 192, 192); text-align: center; border-radius: 5px;}
-.Gold{color: rgb(225, 215, 0); text-align: center; border-radius: 5px;}
-.Platinum{color: rgb(229, 228, 226); text-align: center; border-radius: 5px;}
-.hX{background-color: #555;}
+.sponsorLevels h2 {
+  padding: 5px 0px;
+  /*font-weight: 400;*/
+  font-variant: small-caps;
+}
+.sponsorLevels h2, .sponsorLevels h3 {
+  text-align: center;
+  border-radius: 3px;
+  color: white;
+}
+.Bronze, .bBronze{background-color: #a57b36;}
+.Silver, .bSilver{background-color: #a4a3a2;}
+.Gold, .bGold{background-color: #bea536;}
+.Platinum, .bPlatinum{background-color: #777777;}
 
 .bX{padding: 10px; height: 115px; }
-.bBronze{background-color: rgb(140, 120, 83); text-align: center;  border-radius: 5px;}
-.bSilver{background-color: rgb(192, 192, 192); text-align: center;  border-radius: 5px;}
-.bGold{background-color: rgb(225, 215, 0); text-align: center;  border-radius: 5px;}
-.bPlatinum{background-color: rgb(229, 228, 226); text-align: center;  border-radius: 5px;}
 
 .sponsorList{
   height: 235px;
   list-style: none;
   padding-left: 4px;
+  font-size: 15px;
+}
+.sponsorList i {
+  margin-right: 4px;
 }
 h2.level{
   margin: 5px 0px 10px;
@@ -118,9 +127,37 @@ h2.level{
   border: 1px solid black;
   background-color: #FFA68B;
 }
-div.sponsorIndent{
+.sponsorIndent{
   padding-left: 1.5em;
   text-indent:-1.5em;
+}
+
+/**
+ * Schedule table
+ */
+.schedule th {
+  padding-bottom: 7px;
+}
+.schedule th:after {
+  content: " ";
+  float: left;
+  width: 85%;
+  height: 3px;
+  opacity: .75;
+  background-color: #FE563B;
+}
+.schedule td {
+  padding: 0px 7px;
+}
+
+/**
+ * Map iframe
+ */
+
+.map {
+  float: left;
+  width: 100%;
+  height: 200px;
 }
 
 @media(max-width:1199px) {

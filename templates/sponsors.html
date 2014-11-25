@@ -6,24 +6,24 @@
   </div>
 
 {% set level='' %}
-{% for s in sponsors %}
-  {% if s.Level != level %}
-    {% set level=s.Level %}
+{% for sponsor in sponsors %}
+  {% if sponsor.Level != level %}
+    {% set level=sponsor.Level %}
   <div class="row">
-    <div class="col-md-12"><h2 class="level">{{s.Level}}s</h2></div>
+    <div class="col-md-12"><h2 class="level">{{sponsor.Level}}s</h2></div>
   </div>
   {% endif %}
   <div class="row sponsor">
     <div class="col-md-3">
-      <a href="http://{{s.URL}}">
-        <img src="img/{{s.Logo}}" alt="{{s.Name}}" class="maxWidth">
+      <a href="http://{{sponsor.URL}}">
+        <img src="img/{{sponsor.Logo}}" alt="{{sponsor.Name}}" class="maxWidth">
       </a>
     </div>
     <div class="col-md-3">
-      {{s.Description}}
+      {{sponsor.Description}}
     </div>
     <div class="col-md-6">
-      {{s.Text}}
+      {{sponsor.Text}}
     </div>
   </div>
 {% endfor %}
@@ -31,23 +31,24 @@
   <div class="row">
     <div class="col-md-12">
       <div id="interested" class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Interested in Sponsoring?</span></h2></div>
-      <p class="basic_text">All sponsors will have the opportunity to appoint at least one judge who will have some access to the contestants during the contest.  All judges will be introduced at the welcome event and if the sponsor is offering a prize then the judge will be able to define the parameters for winning the prize.  For example, a prize could go to the most creative design from a certain county, or to the best use of mapping technology, or to the contestant or team the judge feels is most worthy of their prize.  For general prizes each judge will have 10 points to distribute among the various teams in the contest.  The teams with the most points will win the cash prizes.</p>
+      <p class="basic_text">All sponsors will have the opportunity to appoint at least one judge who will have some access to the contestants during the contest.  All judges will be introduced at the welcome event and if the sponsor is offering a prize then the judge will be able to define the parameters for winning the prize.</p>
+      <p>  For example, a prize could go to the most creative design from a certain county, the best use of mapping technology, or to the contestant or team the judge feels is most worthy of their prize.  For general prizes, each judge will have 10 points to distribute among the various teams in the contest.  The teams with the most points will win the cash prizes.</p>
     </div>
   </div>
-  <div class="row">
-    {% for s in sponsorship %}
+  <div class="row sponsorLevels">
+    {% for tier in sponsorship %}
     <div class="col-sm-3 col-md-3">
       <div class="well">
-        <h2 class="{{s.Name}} hX">{{s.Name}}</h2>
+        <h2 class="{{tier.Name}} hX">{{tier.Name}}</h2>
         <hr>
-        <h3 class="b{{s.Name}} bX">{{s.Commitment|raw}}</h3>
-        <hr>
+        <h3 class="b{{tier.Name}} bX">{{tier.Commitment|raw}}</h3>
+        <hr />
         <ul class="sponsorList">
-          <li><i class="fa fa-gavel"></i>&nbsp;Judges: {{s.Judges}}</li>
-          <li><i class="fa fa-clock-o"></i>&nbsp;Access: {{s.Access|raw}}</li>
-          <li><i class="fa fa-microphone"></i>&nbsp;Introduction at the welcome event: {{s.Introduction|raw}}</li>
-          {% if s.Surprize %}
-          <li><i class="fa fa-star"></i>&nbsp;Surprize: {{s.Surprize|raw}}</li>
+          <li><i class="fa fa-gavel"></i>&nbsp;Judges: {{tier.Judges}}</li>
+          <li><i class="fa fa-clock-o"></i>&nbsp;Access: {{tier.Access|raw}}</li>
+          <li><i class="fa fa-microphone"></i>&nbsp;Welcome event intro: {{tier.Introduction|raw}}</li>
+          {% if tier.Surprize %}
+          <li><i class="fa fa-star"></i>&nbsp;Surprize: {{tier.Surprize|raw}}</li>
           {% endif %}
         </ul>
       </div>
@@ -57,7 +58,7 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <p class="basic_text">If you are interested in sponsoring this event give Ben a call at 209-402-5462.</p>
+      <p class="basic_text">If you are interested in sponsoring this event contact Ben at <a href="tel:+12094025462">209-402-5462</a></p>
     </div>
   </div>
 {% include 'footer.html' %}
