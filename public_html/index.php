@@ -13,9 +13,7 @@ $app = new \Slim\Slim(array(
   'debug'          => true
 ));
 
-// Create monolog logger and store logger in container as singleton
-// (Singleton resources retrieve the same log resource definition each time)
-// Prepare view
+// Create the view engine with Twig
 $app->view(new \Slim\Views\Twig());
 $app->view->parserOptions = array(
   'charset'          => 'utf-8',
