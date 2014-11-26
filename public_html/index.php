@@ -4,14 +4,34 @@
 ini_set('display_errors', 1);
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
+date_default_timezone_set('America/Los_Angeles');
+
 // Require composer dependencies
 require '../vendor/autoload.php';
+use Mailgun\Mailgun;
+use ReCaptcha\Captcha;
+use ReCaptcha\CaptchaException;
+
+define('RECAPTCHAPUBLIC', '6LcNJeESAAAAACRIIHVmpwsBv_NRQmZsUaSmjqKh');
+define('RECAPTCHAPRIVATE', '6LcNJeESAAAAACcLAn0pJPF0isoI-i0e1unhg4m_');
 
 // Prepare app
 $app = new \Slim\Slim(array(
   'templates.path' => '../templates',
   'debug'          => true
 ));
+
+$app->add(new \Slim\Middleware\SessionCookie(array(
+    'expires' => '60 minutes',
+    'path' => '/',
+    'domain' => null,
+    'secure' => false,
+    'httponly' => false,
+    'name' => 'slim_session',
+    'secret' => 'DSAG678%^&ghjo5t&8',
+    'cipher' => MCRYPT_RIJNDAEL_256,
+    'cipher_mode' => MCRYPT_MODE_CBC
+)));
 
 // Create the view engine with Twig
 $app->view(new \Slim\Views\Twig());
@@ -206,11 +226,75 @@ $app->get('/signup', function () use ($app) {
   $data['title']       = 'Signup for Valley Hackathon';
   $data['description'] = 'Signup for the Valley Hackathon ';
   $data['h1']          = 'Signup for the Event';
+
+	$captcha = new Captcha();
+
+	$captcha->setPublicKey(RECAPTCHAPUBLIC);
+	$captcha->setPrivateKey(RECAPTCHAPRIVATE);
+	$data['captcha'] = $captcha->displayHTML();
+
   $app->render('signup.html', $data);
+});
+
+$app->post('/register', function () use ($app) {
+  global $data;
+  $data['title']       = 'Thanks for Registering';
+  $data['description'] = 'Thanks for Registering';
+  $data['h1']          = 'Thanks for Registering';
+
+	$captcha = new Captcha();
+
+	$captcha->setPublicKey(RECAPTCHAPUBLIC);
+	$captcha->setPrivateKey(RECAPTCHAPRIVATE);
+
+  try {
+		if ( !$captcha->isValid() ) {
+			throw new CaptchaException($captcha->getError());
+		}
+
+	} catch (CaptchaException $e) {
+  	//echo $e->errorMessage();
+  	//die();
+    $app->flash('error', 'Incorrect Captcha, Please Try Again.');
+    $app->flash('formData', $_POST);
+    $app->redirect('/signup');
+	}
+
+  $mailData=$_POST;
+/*
+  foreach($mailData as $i=>$p){
+    $mailData[$i] = mysql_real_escape_string($p);
+  }
+*/
+
+  $view = $app->view();
+  $view->setData('data', $mailData);
+  $email_content = $view->render('email.html');
+
+  $mg = new Mailgun("key-172019857fe194754e04c77c0f97c847");
+  $domain = "valleyhackathon.com";
+
+  $mg->sendMessage($domain, array('from'    => 'team_signup@ValleyHackathon.com',
+                                  'to'      => 'geektech2000@gmail.com',
+                                  'subject' => 'New Team Signup!',
+                                  'html'    => $email_content,
+                                  'text'    => strip_tags($email_content)
+                                  ));
+
+  $mg->sendMessage($domain, array('from'    => 'team_signup@ValleyHackathon.com',
+                                  'to'      => 'ben@geostrategies.com',
+                                  'subject' => 'New Team Signup!',
+                                  'html'    => $email_content,
+                                  'text'    => strip_tags($email_content)
+                                  ));
+
+
+  $app->render('register.html', $data);
 });
 
 $app->get('/speed-test', function () use ($app) {
 });
+
 
 // Run app
 $app->run();

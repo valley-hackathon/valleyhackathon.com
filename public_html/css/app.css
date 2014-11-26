@@ -216,6 +216,10 @@ h2.level {
   height:200px
 }
 
+#teamSignup{
+  font-size: 16px;
+}
+
 @media(max-width:1199px) {
 #menu > ul > a > li {
   padding:10px 40px

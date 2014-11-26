@@ -1,16 +1,6 @@
 {% include 'header.html' %}
   <div col="row">
     <div col="col-md-12">
-      <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Signup</span></h2></div>
-      <p class="text-danger">Update (as of 11/25/2014)</p>
-      <p>We have acquired larger facilities, so signups are now <b>unlimited!</b></p>
-      <p class="basic_text"><strike>Space for this event is limited and we are taking teams on a first come first served basis.  We have six office rooms in one office space we will be using for the event.  Each room can easily handle a four man team.</strike>  One and two man teams will be placed two to a room.  We have two kitchen areas and a bathroom down the hall.  Should be comfortable surroundings.</p>
-      <p><strike>We do not have online signup this year, so please register your team by calling Ben at <a href="tel:+12094025462">209-402-5462</a></strike></p>
-      <p>We are currently working on implementing an online signup, so please check back soon for more details</p>
-    </div>
-  </div>
-  <div col="row">
-    <div col="col-md-12">
       <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Teams</span></h2></div>
     </div>
   </div>
@@ -39,4 +29,134 @@
 
     </div>
   </div>
+  <div col="row">
+    <div col="col-md-12">
+      <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Signup</span></h2></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <p>Fill out the form below to sign up for the Hackathon.  After you submit this form you will be contacted by Ben from GeoStrategies to confirm the details and finalize your place in the event.</p>
+      {% if flash.error %}
+      <div class="alert alert-danger" role="alert">{{flash.error}}</div>
+      {% endif %}
+      <form class="form-horizontal" role="form" id="teamSignup" method="post" action="register">
+        <div class="form-group">
+          <label for="inputName" class="col-sm-3 control-label">Name<br><small class="text-danger">Required</small></label>
+          <div class="col-sm-9">
+            <input type="text" name="name" class="form-control" id="inputName" placeholder="Your Name" value="{{flash.formData.name}}" data-validation-engine="validate[required]"
+                                data-errormessage-value-missing="Name is required!">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPhone" class="col-sm-3 control-label">Phone<br><small class="text-danger">Required</small></label>
+          <div class="col-sm-9">
+            <input type="text" name="phone" class="form-control" id="inputPhone" placeholder="Phone" value="{{flash.formData.phone}}" data-validation-engine="validate[required,custom[phone]]"
+                                data-errormessage-value-missing="Phone is required!"
+                                data-errormessage-custom-error="Let me give you a hint: 209-555-1212">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail" class="col-sm-3 control-label">Email<br><small class="text-danger">Required</small></label>
+          <div class="col-sm-9">
+            <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" value="{{flash.formData.email}}" data-validation-engine="validate[required,custom[email]]"
+                                data-errormessage-value-missing="Email is required!"
+                                data-errormessage-custom-error="Let me give you a hint: someone@nowhere.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputTeam2" class="col-sm-3 control-label">Member 2</label>
+          <div class="col-sm-9">
+            <input type="text" name="team2" class="form-control" id="inputTeam2" placeholder="Team Member 2 Name" value="{{flash.formData.team2}}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputTeam3" class="col-sm-3 control-label">Member 3</label>
+          <div class="col-sm-9">
+            <input type="text" name="team3" class="form-control" id="inputTeam3" placeholder="Team Member 3 Name" value="{{flash.formData.team3}}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputTeam4" class="col-sm-3 control-label">Member 4</label>
+          <div class="col-sm-9">
+            <input type="text" name="team4" class="form-control" id="inputTeam4" placeholder="Team Member 4 Name" value="{{flash.formData.team4}}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputTeamName" class="col-sm-3 control-label">Name</label>
+          <div class="col-sm-9">
+            <input type="text" name="teamName" class="form-control" id="inputTeamName" placeholder="Team Name" value="{{flash.formData.teamName}}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputTech" class="col-sm-3 control-label">Technologies</label>
+          <div class="col-sm-9">
+            <input type="text" name="tech" class="form-control" id="inputTech" placeholder="ex. Node.js, Angular.js, .Net, Laravel, Slim, etc." value="{{flash.formData.tech}}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Counties<br><small>What Counties are your team members from?</small></label>
+          <div class="col-sm-4">
+            <div class="checkbox">
+              <label>
+                <input name="SanJoaquin" type="checkbox" value="1"{% if flash.formData.SanJoaquin %} checked="checked"{% endif %}>
+                San Joaquin
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input name="Stanislaus" type="checkbox" value="1"{% if flash.formData.Stanislaus %} checked="checked"{% endif %}>
+                Stanislaus
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input name="Merced" type="checkbox" value="1"{% if flash.formData.Merced %} checked="checked"{% endif %}>
+                Merced
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="checkbox">
+              <label>
+                <input name="Calaveras" type="checkbox" value="1"{% if flash.formData.Calaveras %} checked="checked"{% endif %}>
+                Calaveras
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input name="Tuolumne" type="checkbox" value="1"{% if flash.formData.Tuolumne %} checked="checked"{% endif %}>
+                Tuolumne
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input name="Mariposa" type="checkbox" value="1"{% if flash.formData.Mariposa %} checked="checked"{% endif %}>
+                Mariposa
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Prove you are a human</label>
+          <div class="col-sm-9">
+            {{captcha|raw}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">&nbsp;</label>
+          <div class="col-sm-9">
+            <button type="submit" class="btn btn-primary">Register</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-4">
+      <p class="text-danger">Update (as of 11/25/2014)</p>
+      <p>We have acquired larger facilities, so signups are now limited to 15 teams.</p>
+      <p class="basic_text"><strike>Space for this event is limited and we are taking teams on a first come first served basis.  We have six office rooms in one office space we will be using for the event.  Each room can easily handle a four man team.</strike></p>
+      <p><strike>We do not have online signup this year, so please register your team by calling Ben at <a href="tel:+12094025462">209-402-5462</a></strike></p>
+    </div>
+  </div>
+{% set form=1 %}
 {% include 'footer.html' %}

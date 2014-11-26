@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<title>Contact Request Submitted on Website</title>
+	</head>
+
+	<body style="background-color:#FFF;">
+		<div align="center">
+		  <h3>Contact From Website</h3>
+			<table style="background-color: #ebebeb; width: 600px; height: auto;" border="0" cellspacing="18" cellpadding="0">
+				<tr>
+					<td style="text-align: left; width: 59px; height: auto; vertical-align: top;" colspan="2">
+			    	{% for key, d in data %}
+			    	  {% if key=='recaptcha_challenge_field' or key =='recaptcha_response_field' %}
+			    	  {% else %}
+  			    	  {% if d[0] %}
+  			    	    {% for x in d %}
+  			    	    {{key}} - {{x|nl2br}}<br>
+  			    	    {% endfor %}
+  			    	  {% else %}
+  			    	    {{key}} - {{d|nl2br}}<br>
+  			    	  {% endif %}
+
+			    	  {% endif %}
+			    	{% endfor %}
+					</td>
+				</tr>
+			</table>
+		</div>
+		<p></p>
+	</body>
+
+</html>

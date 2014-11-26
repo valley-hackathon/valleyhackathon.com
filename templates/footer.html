@@ -7,8 +7,20 @@
       </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/packages/jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-en.js"></script>
+    <script type="text/javascript" src="/packages/jQuery-Validation-Engine-master/js/jquery.validationEngine.js"></script>
     <script type="text/javascript" src="/packages/woothemes-FlexSlider/jquery.flexslider-min.js"></script>
     <script type="text/javascript" src="/scripts/page.js"></script>
+    {% if form %}
+    <script language="javascript" type="text/javascript">
+    (function($) {
+    	$(function() {
+        $("#teamSignup").validationEngine();
+    	});
+    })(jQuery);
+    </script>
+    {% endif %}
+
   </body>
   <!-- Current revision: {{current_hash}} -->
 </html>
