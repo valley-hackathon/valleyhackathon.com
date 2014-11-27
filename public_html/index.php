@@ -158,7 +158,7 @@ $data['sponsorship'][] = array(
 $data['teams'][] = array(
   'Name'       => 'Project Stormageddon',
   'Frameworks' => 'Angular.js / Slim Framework / Swift',
-  'Members'    => 'Matthew Davies<br>Nic Hector<br>Nathan Bunney',
+  'Members'    => 'Matthew Davies<br>Nic Hector<br>Nathan Bunney<br>Robert Huffman',
   'County'     => 'Stanislaus<br>Calaveras'
 );
 $data['teams'][] = array(
