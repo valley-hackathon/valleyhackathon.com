@@ -64,14 +64,6 @@ $data['sponsors'][] = array(
   'Text'        => 'GeoStrategies is the founding sponsor. They are giving us food and a place to hold the contest. Without them there would be no contest. These guys are awesome!'
 );
 $data['sponsors'][] = array(
-  'Level'       => 'Platinum Sponsor',
-  'Name'        => 'ClearWave',
-  'URL'         => 'clearwavesoftware.com',
-  'Logo'        => 'clearwave.png',
-  'Description' => 'We\'re not your ordinary software company.',
-  'Text'        => 'The guys over at Clearwave Software jumped up and offered to sponsor the event without being asked. These guys deserve some serious geek cred for that!'
-);
-$data['sponsors'][] = array(
   'Level'       => 'Gold Sponsor',
   'Name'        => 'Tuolumne County Innovation Lab',
   'URL'         => 'www.myinnovationlab.org',
@@ -158,8 +150,8 @@ $data['sponsorship'][] = array(
 $data['teams'][] = array(
   'Name'       => 'Project Stormageddon',
   'Frameworks' => 'Angular.js / Slim Framework / Swift',
-  'Members'    => 'Matthew Davies<br>Nic Hector<br>Nathan Bunney<br>Robert Huffman',
-  'County'     => 'Stanislaus<br>Calaveras'
+  'Members'    => 'Matthew Davies<br>Nathan Bunney<br>Robert Huffman',
+  'County'     => 'Stanislaus'
 );
 $data['teams'][] = array(
   'Name'       => 'Team 2',
