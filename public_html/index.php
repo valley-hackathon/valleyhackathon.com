@@ -179,7 +179,8 @@ $data['teams'][] = array(
 );
 
 // Get the current git hash
-$data['current_hash'] = array_slice(explode('/', __DIR__), -2, 1)[0];
+$slicedDirectory = array_slice(explode('/', __DIR__), -2, 1);
+$data['current_hash'] = $slicedDirectory[0];
 
 $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 
