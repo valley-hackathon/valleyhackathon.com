@@ -288,6 +288,20 @@ $app->post('/register', function () use ($app) {
 $app->get('/speed-test', function () use ($app) {
 });
 
+$app->get('/flier', function () use($app) {
+    $log = '/home/valleyh/files/ValleyHackathonFlier.pdf';
+    $res = $app->response();
+    $res['Content-Description'] = 'File Transfer';
+    $res['Content-Type'] = 'application/pdf';
+    $res['Content-Disposition'] ='attachment; filename=' . basename($log);
+    $res['Content-Transfer-Encoding'] = 'binary';
+    $res['Expires'] = '0';
+    $res['Cache-Control'] = 'must-revalidate';
+    $res['Pragma'] = 'public';
+    $res['Content-Length'] = filesize($log);
+    readfile($log);
+});
+
 
 // Run app
 $app->run();
