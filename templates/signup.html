@@ -1,42 +1,12 @@
 {% include 'header.html' %}
   <div col="row">
     <div col="col-md-12">
-      <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Teams</span></h2></div>
-    </div>
-  </div>
-  <div col="row">
-    <div col="col-md-12">
-      <table class="table table-condensed table-striped">
-        <thead>
-          <tr>
-            <th>Team Name / Project Type</th>
-            <th>Team Members</th>
-            <th>Counties Represented</th>
-            <th>Project Link</th>
-          </tr>
-        </thead>
-        <tbody>
-        {% for t in teams %}
-          <tr>
-            <td>{{t.Name}}<br>{{t.Frameworks}}</td>
-            <td>{{t.Members|raw}}</td>
-            <td>{{t.County|raw}}</td>
-            <td>{% if t.URL %}<a href="http://{{t.URL}}">{% if t.ProjectPic %}<img class="projectImage" src="/img/project/{{t.ProjectPic}}">{% else %}{{t.Name}}{% endif %}</a>{% else %}Coming Soon{% endif %}</td>
-          </tr>
-        {% endfor %}
-        </tbody>
-      </table>
-
-    </div>
-  </div>
-  <div col="row">
-    <div col="col-md-12">
       <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Signup</span></h2></div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-8">
-      <p>Fill out the form below to sign up for the Hackathon.  After you submit this form you will be contacted by Ben from GeoStrategies to confirm the details and finalize your place in the event.</p>
+      <p>Fill out the form below to sign up for the Hackathon.  <strong>Individual signups are welcome!  We will not put you on the team page but you may form teams with other individuals on the day of the event.</strong>  After you submit this form you will be contacted by Ben from GeoStrategies to confirm the details and finalize your place in the event.</p>
       {% if flash.error %}
       <div class="alert alert-danger" role="alert">{{flash.error}}</div>
       {% endif %}
@@ -152,6 +122,8 @@
       </form>
     </div>
     <div class="col-md-4">
+      <p class="text-danger">Update (as of 12/17/2014)</p>
+      <p>Individuals are encouraged to sign up using the form to the left.  Please add the technologies you are comfortable in when you do.  Individuals can form teams or join teams on the day of the event.  No one will be left out.</p>
       <p class="text-danger">Update (as of 11/26/2014)</p>
       <p>We now have online signups!</p>
       <p class="text-danger">Update (as of 11/25/2014)</p>

@@ -233,6 +233,22 @@ $app->get('/signup', function () use ($app) {
   $app->render('signup.html', $data);
 });
 
+$app->get('/teams', function () use ($app) {
+  global $data;
+  $data['title']       = 'Valley Hackathon Teams';
+  $data['description'] = 'Check out the current teams for the Valley Hackathon';
+  $data['h1']          = 'Current Teams';
+  $app->render('teams.html', $data);
+});
+
+$app->get('/prizes', function () use ($app) {
+  global $data;
+  $data['title']       = 'Valley Hackathon Prizes';
+  $data['description'] = 'Check out the prizes for the Valley Hackathon';
+  $data['h1']          = 'Current Prizes';
+  $app->render('prizes.html', $data);
+});
+
 $app->post('/register', function () use ($app) {
   global $data;
   $data['title']       = 'Thanks for Registering';
