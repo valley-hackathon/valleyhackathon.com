@@ -64,6 +64,14 @@ $data['sponsors'][] = array(
   'Text'        => 'GeoStrategies is the founding sponsor. They are giving us food and a place to hold the contest. Without them there would be no contest. These guys are awesome!'
 );
 $data['sponsors'][] = array(
+  'Level'       => 'Platinum Sponsor',
+  'Name'        => 'RethinkDB',
+  'URL'         => 'www.rethinkdb.org',
+  'Logo'        => 'RethinkDB.png',
+  'Description' => 'An open-source distributed database built with love.',
+  'Text'        => 'These guys are amazing and we are thrilled to have the on board.  There is going to be a pre-hackathon event with them so keep your eye on http://www.meetup.com/Modesto-Scripting-Language-Meetup/ for more details.'
+);
+$data['sponsors'][] = array(
   'Level'       => 'Gold Sponsor',
   'Name'        => 'Tuolumne County Innovation Lab',
   'URL'         => 'www.myinnovationlab.org',
@@ -115,32 +123,28 @@ $data['sponsorship'][] = array(
  'Judges'       => 'One',
  'Access'       => 'Friday 5pm-8pm,
  Saturday 5pm to end',
- 'Surprize'     => '',
  'Introduction' => 'brief'
 );
 $data['sponsorship'][] = array(
  'Name'         => 'Silver',
- 'Commitment'   => '$500<br>-or-<br>$250 + prizes worth over $250',
+ 'Commitment'   => '$500',
  'Judges'       => 'One',
  'Access'       => 'Friday 5pm-8pm,
  Saturday 5pm to end',
- 'Surprize'     => '',
  'Introduction' => '30 seconds'
 );
 $data['sponsorship'][] = array(
  'Name'         => 'Gold',
- 'Commitment'   => '$1000<br>-or-<br>$500 + prizes worth over $500',
+ 'Commitment'   => '$1000',
  'Judges'       => 'One',
  'Access'       => 'Entire Event',
- 'Surprize'     => '',
  'Introduction' => 'up to one minute'
 );
 $data['sponsorship'][] = array(
  'Name'         => 'Platinum',
- 'Commitment'   => '$1000 + prizes worth over $1000',
+ 'Commitment'   => '$2000',
  'Judges'       => 'One or Two',
  'Access'       => 'Entire Event',
- 'Surprize'     => 'Sponsor a surprise that will cause joy and admiration among the contestants.',
  'Introduction' => 'up to one minute'
 );
 
@@ -150,7 +154,7 @@ $data['sponsorship'][] = array(
 $data['teams'][] = array(
   'Name'       => 'Project Stormageddon',
   'Frameworks' => 'Angular.js / Slim / Swift',
-  'Members'    => 'Matthew Davies<br>Nathan Bunney<br>Robert Huffman',
+  'Members'    => 'Matthew Davies<br>Nathan Bunney<br>Robert Huffman<br>Jared Hill',
   'County'     => 'Stanislaus'
 );
 $data['teams'][] = array(
