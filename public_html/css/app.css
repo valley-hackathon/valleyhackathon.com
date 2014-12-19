@@ -22,6 +22,12 @@ body {
   background: url(../img/VHLogo400.png) 0px 20px no-repeat;
 }
 
+.header a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
 #menu {
   background-color:#FE563B;
   margin: 0 auto;
@@ -334,6 +340,9 @@ h2.level {
 @media(max-width:400px) {
 #menu > ul > li {
   width:100%
+}
+#menu{
+  height: auto;
 }
 #menu > ul > li > a {
   font-size:22px;
