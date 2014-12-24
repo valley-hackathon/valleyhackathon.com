@@ -15,6 +15,8 @@ use ReCaptcha\CaptchaException;
 define('RECAPTCHAPUBLIC', '6LcNJeESAAAAACRIIHVmpwsBv_NRQmZsUaSmjqKh');
 define('RECAPTCHAPRIVATE', '6LcNJeESAAAAACcLAn0pJPF0isoI-i0e1unhg4m_');
 
+require_once('./data.php');
+
 // Prepare app
 $app = new \Slim\Slim(array(
   'templates.path' => '../templates',
@@ -41,145 +43,6 @@ $app->view->parserOptions = array(
   'auto_reload'      => true,
   'strict_variables' => false,
   'autoescape'       => true
-);
-
-/**
- * Judges
- */
-$data['judges'][] = array(
-  'Name'    => 'Scott Smith',
-  'Bio'     => 'VP of Product Development at Front Porch, full stack .NET developer by day and Node developer by night.',
-  'picture' => 'ScottSmith.jpg'
-);
-
-/**
- * Sponsors
- */
-$data['sponsors'][] = array(
-  'Level'       => 'Founding Sponsor',
-  'Name'        => 'GeoStrategies',
-  'URL'         => 'GeoStrategies.com',
-  'Logo'        => 'geostrategies.png',
-  'Description' => 'Tactical Strategies. Actionable Intelligence.',
-  'Text'        => 'GeoStrategies is the founding sponsor. They are giving us food and a place to hold the contest. Without them there would be no contest. These guys are awesome!'
-);
-$data['sponsors'][] = array(
-  'Level'       => 'Platinum Sponsor',
-  'Name'        => 'RethinkDB',
-  'URL'         => 'www.rethinkdb.com',
-  'Logo'        => 'RethinkDB.png',
-  'Description' => 'An open-source distributed database built with love.',
-  'Text'        => 'These guys are amazing and we are thrilled to have the on board.  There is going to be a pre-hackathon event with them so keep your eye on http://www.meetup.com/Modesto-Scripting-Language-Meetup/ for more details.'
-);
-$data['sponsors'][] = array(
-  'Level'       => 'Gold Sponsor',
-  'Name'        => 'Tuolumne County Innovation Lab',
-  'URL'         => 'www.myinnovationlab.org',
-  'Logo'        => 'innovationlab.png',
-  'Description' => 'Local Maker Space!',
-  'Text'        => 'The InnovationLab is a membership-based facility. It includes a do-it-yourself fabrication and prototyping center,
-  a maker space, and a learning center. And it is in Sonora. Woot!'
-);
-$data['sponsors'][] = array(
-  'Level'       => 'Gold Sponsor',
-  'Name'        => 'Inventaweb',
-  'URL'         => 'inventaweb.net',
-  'Logo'        => 'inventaweb.png',
-  'Description' => 'Inventing your next website.',
-  'Text'        => 'Inventaweb is building this nifty website for the event. Keep looking back here for more information and after the event for links to several of the projects!'
-);
-$data['sponsors'][] = array(
-  'Level'       => 'Silver Sponsor',
-  'Name'        => 'Front Porch',
-  'URL'         => 'frontporch.com',
-  'Logo'        => 'frontporch.png',
-  'Description' => 'Subscriber Communication Solution for Service Providers',
-  'Text'        => 'We are stoked about having these guys as a sponsor, and even more so about having Scott Smith as a judge!'
-);
-$data['sponsors'][] = array(
-  'Level'       => 'Bronze Sponsor',
-  'Name'        => 'DataBoost',
-  'URL'         => 'databoost.com',
-  'Logo'        => 'databoost.png',
-  'Description' => 'Data Marketing Application Development and Hosting Solutions.',
-  'Text'        => 'These guys are going to be providing breakfast,
-  we love breakfast therefore we love them. :-)'
-);
-$data['sponsors'][] = array(
-  'Level'       => 'Bronze Sponsor',
-  'Name'        => 'Associated Feed',
-  'URL'         => 'associatedfeed.com',
-  'Logo'        => 'associated.png',
-  'Description' => 'Delivering the best feed products for your animals.',
-  'Text'        => 'Not just your average feed mill. This place is a serious technology incubator.'
-);
-
-/**
- * Sponsorship tiers
- */
-$data['sponsorship'][] = array(
- 'Name'         => 'Bronze',
- 'Commitment'   => '$250',
- 'Judges'       => 'One',
- 'Access'       => 'Friday 5pm-8pm,
- Saturday 5pm to end',
- 'Introduction' => 'brief'
-);
-$data['sponsorship'][] = array(
- 'Name'         => 'Silver',
- 'Commitment'   => '$500',
- 'Judges'       => 'One',
- 'Access'       => 'Friday 5pm-8pm,
- Saturday 5pm to end',
- 'Introduction' => '30 seconds'
-);
-$data['sponsorship'][] = array(
- 'Name'         => 'Gold',
- 'Commitment'   => '$1000',
- 'Judges'       => 'One',
- 'Access'       => 'Entire Event',
- 'Introduction' => 'up to one minute'
-);
-$data['sponsorship'][] = array(
- 'Name'         => 'Platinum',
- 'Commitment'   => '$2000',
- 'Judges'       => 'One or Two',
- 'Access'       => 'Entire Event',
- 'Introduction' => 'up to one minute'
-);
-
-/**
- * Teams
- */
-$data['teams'][] = array(
-  'Name'       => 'Project Stormageddon',
-  'Frameworks' => 'Angular.js / Slim / Swift',
-  'Members'    => 'Matthew Davies<br>Nathan Bunney<br>Robert Huffman<br>Jared Hill',
-  'County'     => 'Stanislaus'
-);
-$data['teams'][] = array(
-  'Name'       => 'Team 2',
-  'Frameworks' => 'Angular.js / Node.js / Koa.js',
-  'Members'    => 'James Moore<br>Joshua Chamberlain<br>Bruce Freeby',
-  'County'     => 'Stanislaus'
-);
-$data['teams'][] = array(
-  'Name'       => 'Guinea Pigs',
-  'Frameworks' => '',
-  'Members'    => 'Ed Taylor<br>Shane Powser<br>Cameron Jordan',
-  'County'     => 'Tuolumne'
-);
-$data['teams'][] = array(
-  'Name'       => 'Team 4',
-  'Frameworks' => '',
-  'Members'    => 'Mat Wood<br>Brian Blocher<br>James Williams',
-  'County'     => 'Tuolumne'
-);
-$data['teams'][] = array(
-  'Name'       => 'Team 5',
-  'Frameworks' => 'React/Node.js',
-  'Members'    => 'Bryan Garza<br>Mario Muniz<br>Brett Martin<br>Annie Yang',
-  'County'     => 'Stanislaus'
 );
 
 // Get the current git hash
@@ -214,8 +77,16 @@ $app->get('/sponsors', function () use ($app) {
   global $data;
   $data['title']       = 'Sponsors of Valley Hackathon';
   $data['description'] = 'Sponsors of Valley Hackathon are all local companies involved in technology in one way or another.';
-  $data['h1']          = 'Aponsors of the Valley Hackathon';
+  $data['h1']          = 'Sponsors of the Valley Hackathon';
   $app->render('sponsors.html', $data);
+});
+
+$app->get('/judges', function () use ($app) {
+  global $data;
+  $data['title']       = 'Judges of Valley Hackathon';
+  $data['description'] = 'Judges of Valley Hackathon are an eclectic group of technologists, business leaders, and design experts.';
+  $data['h1']          = 'Judges of the Valley Hackathon';
+  $app->render('judges.html', $data);
 });
 
 $app->get('/signup', function () use ($app) {
