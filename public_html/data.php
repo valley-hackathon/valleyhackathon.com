@@ -9,25 +9,28 @@ $data['judges'][] = array(
   'picture' => 'CarlSchroder.jpg',
   'sponsorID' => 0
 );
-
 $data['judges'][] = array(
   'Name'    => 'Scott Smith',
   'Bio'     => 'VP of Product Development at Front Porch, full stack .NET developer by day and Node developer by night.',
   'picture' => 'ScottSmith.jpg',
   'sponsorID' => 4
 );
-
 $data['judges'][] = array(
   'Name'    => 'Rick Swanson',
   'Bio'     => 'Chairman of the Board at Associated Feed and Supply, Rick has been an early adopter of technology his entire life.',
   'picture' => 'RickSwanson.jpg',
   'sponsorID' => 6
 );
-
 $data['judges'][] = array(
   'Name'    => 'Maria Carlson',
   'Bio'     => 'Maria is the head of marketing and web development at Marcia Herrmann Design, she has over 17 years experience in designing websites and digital artwork',
   'picture' => 'MariaCarlson.jpg',
+  'sponsorID' => 7
+);
+$data['judges'][] = array(
+  'Name'    => 'Justin Ribeiro',
+  'Bio'     => 'Software Engineer at Stickman Ventures. Google Developer Expert, Wearables. Software engineer. Author. Dad.',
+  'picture' => 'JustinRibeiro.jpg',
   'sponsorID' => 7
 );
 
