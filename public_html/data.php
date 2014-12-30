@@ -31,7 +31,7 @@ $data['judges'][] = array(
   'Name'    => 'Justin Ribeiro',
   'Bio'     => 'Software Engineer at Stickman Ventures. Google Developer Expert, Wearables. Software engineer. Author. Dad.',
   'picture' => 'JustinRibeiro.jpg',
-  'sponsorID' => 7
+  'sponsorID' => 8
 );
 
 /**
@@ -102,6 +102,14 @@ $data['sponsors'][7] = array(
   'Logo'        => 'mhd.png',
   'Description' => 'Brand development, graphic design, and website and database design for the Central Valley and beyond.',
   'Text'        => 'These guys are expert designers and developers, they know the industry well.'
+);
+$data['sponsors'][8] = array(
+  'Level'       => null,
+  'Name'        => 'Stickman Ventures',
+  'URL'         => 'stickmanventures.com',
+  'Logo'        => 'stickmanventures.png',
+  'Description' => 'Build. Animate. Ship.',
+  'Text'        => 'Stickman is an amazing and distributed group of technologists who produce cool things.'
 );
 
 /**

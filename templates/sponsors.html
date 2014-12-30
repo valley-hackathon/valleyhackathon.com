@@ -10,7 +10,7 @@
   </div>
 
 {% set level='' %}
-{% for sponsor in sponsors %}
+{% for sponsor in sponsors if sponsor.Level %}
   {% if sponsor.Level != level %}
     {% set level=sponsor.Level %}
   <div class="row">
