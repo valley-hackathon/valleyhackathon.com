@@ -4,6 +4,13 @@
  * Judges
  */
 $data['judges'][] = array(
+  'Name'    => 'Carl Schroder',
+  'Bio'     => 'President and CEO of GeoStrategies, Carl understands the business side of technology like few in this generation.',
+  'picture' => 'CarlSchroder.jpg',
+  'sponsorID' => 0
+);
+
+$data['judges'][] = array(
   'Name'    => 'Scott Smith',
   'Bio'     => 'VP of Product Development at Front Porch, full stack .NET developer by day and Node developer by night.',
   'picture' => 'ScottSmith.jpg',
