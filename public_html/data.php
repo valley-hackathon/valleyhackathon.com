@@ -25,12 +25,16 @@ $data['judges'][] = array(
   'Name'    => 'Erin Priest',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   'Bio'     => 'Web and Graphic Designer at Marcia Herrmann Design, Erin has been doing web design for a lifetime.',
 =======
   'Bio'     => 'Web and Graphic Designer at Marcia Herrmann Design, Erin has been doing design for a lifetime.',
 >>>>>>> Updates to sponsors and judges pages
 =======
   'Bio'     => 'Web and Graphic Designer at Marcia Herrmann Design, Erin has been doing web design for a lifetime.',
+>>>>>>> Squashed commit of the following:
+=======
+  'Bio'     => 'Web and Graphic Designer at Marcia Herrmann Design, Erin has been doing design for a lifetime.',
 >>>>>>> Squashed commit of the following:
   'picture' => 'ErinPriest.jpg',
   'sponsorID' => 7
