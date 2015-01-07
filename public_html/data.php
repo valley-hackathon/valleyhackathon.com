@@ -22,17 +22,25 @@ $data['judges'][] = array(
   'sponsorID' => 6
 );
 $data['judges'][] = array(
-  'Name'    => 'Maria Carlson',
-  'Bio'     => 'Maria is the head of marketing and web development at Marcia Herrmann Design, she has over 17 years experience in designing websites and digital artwork',
-  'picture' => 'MariaCarlson.jpg',
+  'Name'    => 'Erin Priest',
+  'Bio'     => 'Web and Graphic Designer at Marcia Herrmann Design, Erin has been doing web design for a lifetime.',
+  'picture' => 'ErinPriest.jpg',
   'sponsorID' => 7
 );
 $data['judges'][] = array(
-  'Name'    => 'Justin Ribeiro',
-  'Bio'     => 'Software Engineer at Stickman Ventures. Google Developer Expert, Wearables. Software engineer. Author. Dad.',
-  'picture' => 'JustinRibeiro.jpg',
-  'sponsorID' => 8
+  'Name'    => 'Simeon Franklin',
+  'Bio'     => 'Technical Instructor at Twitter, Simeon is the founder of the Modesto Scripting Language Meetup.',
+  'picture' => 'SimeonFranklin.jpg',
+  'sponsorID' => 9
 );
+$data['judges'][] = array(
+  'Name'    => 'Loyd Schutte',
+  'Bio'     => 'Multimedia and IT Director, Interactive Design and Development, Loyd is a web guru.',
+  'picture' => 'LoydSchutte.jpg',
+  'sponsorID' => 10
+);
+
+
 
 /**
  * Sponsors
@@ -111,6 +119,22 @@ $data['sponsors'][8] = array(
   'Description' => 'Build. Animate. Ship.',
   'Text'        => 'Stickman is an amazing and distributed group of technologists who produce cool things.'
 );
+$data['sponsors'][9] = array(
+  'Level'       => null,
+  'Name'        => 'Twitter',
+  'URL'         => 'Twitter.com',
+  'Logo'        => 'Twitter.png',
+  'Description' => '',
+  'Text'        => ''
+);
+$data['sponsors'][10] = array(
+  'Level'       => null,
+  'Name'        => 'NeverBoring',
+  'URL'         => 'NeverBoring.com',
+  'Logo'        => 'neverboring.png',
+  'Description' => '',
+  'Text'        => ''
+);
 
 /**
  * Sponsorship tiers
@@ -118,32 +142,23 @@ $data['sponsors'][8] = array(
 $data['sponsorship'][] = array(
  'Name'         => 'Bronze',
  'Commitment'   => '$250',
- 'Judges'       => 'One',
- 'Access'       => 'Friday 5pm-8pm,
- Saturday 5pm to end',
  'Introduction' => 'brief'
 );
 $data['sponsorship'][] = array(
  'Name'         => 'Silver',
  'Commitment'   => '$500',
- 'Judges'       => 'One',
- 'Access'       => 'Friday 5pm-8pm,
- Saturday 5pm to end',
  'Introduction' => '30 seconds'
 );
 $data['sponsorship'][] = array(
  'Name'         => 'Gold',
  'Commitment'   => '$1000',
- 'Judges'       => 'One',
- 'Access'       => 'Entire Event',
  'Introduction' => 'up to one minute'
 );
 $data['sponsorship'][] = array(
  'Name'         => 'Platinum',
  'Commitment'   => '$2000',
- 'Judges'       => 'One or Two',
- 'Access'       => 'Entire Event',
- 'Introduction' => 'up to one minute'
+ 'Introduction' => 'up to one minute',
+ 'Surprize'     => 'Platinum Sponsors can sponsor a surprise for the event.  Call us for more details.'
 );
 
 /**

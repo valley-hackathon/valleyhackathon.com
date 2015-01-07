@@ -179,11 +179,11 @@ p.small_front {
 
 .bX {
   padding:10px;
-  height:115px
+  height:43px
 }
 
 .sponsorList {
-  height:235px;
+  height:275px;
   list-style:none;
   padding-left:4px;
   font-size:15px
@@ -223,6 +223,17 @@ h2.level {
 
 .schedule td {
   padding:0 7px
+}
+
+
+/*** Judges page ***/
+.judge{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted black;
+}
+.judgeBio{
+  margin-top: 40px;
 }
 
 /**

@@ -39,8 +39,8 @@
           <span class="heading_center_bg">Interested in Sponsoring?</span>
         </h2>
       </div>
-      <p class="basic_text">All sponsors will have the opportunity to appoint at least one judge who will have some access to the contestants during the contest. All judges will be introduced at the welcome event and if the sponsor is offering a prize then the judge will be able to define the parameters for winning the prize.</p>
-      <p> For example, a prize could go to the most creative design from a certain county, the best use of mapping technology, or to the contestant or team the judge feels is most worthy of their prize. For general prizes, each judge will have 10 points to distribute among the various teams in the contest. The teams with the most points will win the cash prizes.</p>
+      <p class="basic_text">All judges will be introduced at the welcome event and if the sponsor is offering a prize then the judge will be able to define the parameters for winning the prize.</p>
+      <p> For example, a prize could go to the most creative design from a certain county, the best use of mapping technology, or to the contestant or team the judge feels is most worthy of their prize.</p>
     </div>
   </div>
   <div class="row sponsorLevels">
@@ -52,9 +52,9 @@
         <h3 class="b{{tier.Name}} bX">{{tier.Commitment|raw}}</h3>
         <hr />
         <ul class="sponsorList">
-          <li><i class="fa fa-gavel"></i>&nbsp;Judges: {{tier.Judges}}</li>
-          <li><i class="fa fa-clock-o"></i>&nbsp;Access: {{tier.Access|raw}}</li>
           <li><i class="fa fa-microphone"></i>&nbsp;Welcome event intro: {{tier.Introduction|raw}}</li>
+          <li><i class="fa fa-smile-o"></i>&nbsp;Your name and Logo on all our printed materials (Banner, maybe T-Shirts, fliers, etc.)</li>
+          <li><i class="fa fa-cloud"></i>&nbsp;Your logo, tagline, and a fun description on our sponsors page and your logo and tagline on our home page.  Both of your listings will have links to your website.</li>
           {% if tier.Surprize %}
           <li><i class="fa fa-star"></i>&nbsp;Surprize: {{tier.Surprize|raw}}</li>
           {% endif %}
