@@ -107,7 +107,7 @@ $data['sponsors'][7] = array(
   'Level'       => 'Bronze Sponsor',
   'Name'        => 'Marcia Herrmann Design',
   'URL'         => 'her2man2.com',
-  'Logo'        => 'mhd.png',
+  'Logo'        => 'mhd2.jpg',
   'Description' => 'Brand development, graphic design, and website and database design for the Central Valley and beyond.',
   'Text'        => 'These guys are expert designers and developers, they know the industry well.'
 );
