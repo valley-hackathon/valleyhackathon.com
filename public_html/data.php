@@ -22,12 +22,6 @@ $data['judges'][] = array(
   'sponsorID' => 6
 );
 $data['judges'][] = array(
-  'Name'    => 'Erin Priest',
-  'Bio'     => 'Web and Graphic Designer at Marcia Herrmann Design, Erin has been doing design for a lifetime.',
-  'picture' => 'ErinPriest.jpg',
-  'sponsorID' => 7
-);
-$data['judges'][] = array(
   'Name'    => 'Simeon Franklin',
   'Bio'     => 'Technical Instructor at Twitter, Simeon is the founder of the Modesto Scripting Language Meetup.',
   'picture' => 'SimeonFranklin.jpg',
