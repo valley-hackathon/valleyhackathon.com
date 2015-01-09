@@ -188,3 +188,9 @@ $data['teams'][] = array(
   'Members'    => 'Bryan Garza<br>Mario Muniz<br>Brett Martin<br>Annie Yang',
   'County'     => 'Stanislaus'
 );
+$data['teams'][] = array(
+  'Name'       => 'Team 6',
+  'Frameworks' => 'Java, Python, PHP',
+  'Members'    => 'Brandon Halpin<br>Bryan Potts<br>Michael Schilber<br>Eric Greenberg',
+  'County'     => 'Stanislaus'
+);
