@@ -8,39 +8,37 @@
       </div>
     </div>
   </div>
-
-{% set level='' %}
-{% for sponsor in sponsors if sponsor.Level %}
-  {% if sponsor.Level != level %}
-    {% set level=sponsor.Level %}
   <div class="row">
-    <div class="col-md-12"><h2 class="level">{{sponsor.Level}}s</h2></div>
-  </div>
-  {% endif %}
-  <div class="row sponsor">
-    <div class="col-md-3">
-      <a href="http://{{sponsor.URL}}">
-        <img src="img/{{sponsor.Logo}}" alt="{{sponsor.Name}}" class="maxWidth" />
-      </a>
-    </div>
-    <div class="col-md-3">
-      {{sponsor.Description}}
-    </div>
-    <div class="col-md-6">
-      {{sponsor.Text}}
-    </div>
-  </div>
-{% endfor %}
-
-  <div class="row">
-    <div class="col-md-12">
-      <div id="interested" class="heading_dots hide-for-small">
-        <h2 class="heading_supersize">
-          <span class="heading_center_bg">Interested in Sponsoring?</span>
-        </h2>
+    <div class="col-md-8">
+    {% set level='' %}
+    {% for sponsor in sponsors if sponsor.Level %}
+      {% if sponsor.Level != level %}
+        {% set level=sponsor.Level %}
+      <div class="row">
+        <div class="col-md-12"><h2 class="level">{{sponsor.Level}}s</h2></div>
       </div>
-      <p class="basic_text">All judges will be introduced at the welcome event and if the sponsor is offering a prize then the judge will be able to define the parameters for winning the prize.</p>
-      <p> For example, a prize could go to the most creative design from a certain county, the best use of mapping technology, or to the contestant or team the judge feels is most worthy of their prize.</p>
+      {% endif %}
+      <div class="row sponsor">
+        <div class="col-md-3">
+          <a href="http://{{sponsor.URL}}">
+            <img src="img/{{sponsor.Logo}}" alt="{{sponsor.Name}}" class="maxWidth" />
+          </a>
+        </div>
+        <div class="col-md-3">
+          {{sponsor.Description}}
+        </div>
+        <div class="col-md-6">
+          {{sponsor.Text}}
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+    <div class="col-md-4">
+      <h2>Interested in Sponsoring?</h2>
+      <p class="basic_text">We are were looking for a mix of local companies that are interested in technology and in meeting some of the best programmers, graphic artists, and other technical folk that the valley has to offer.  The Valley Hackathon is seeking to incubate new ventures and support existing ones by creating a focal point in the valley for technologists and business to converge.</p>
+      <p class="basic_text">All sponsors will have their logo and tagline on the Valley Hackathon website along with a link to their website.  Logos from companies will be used on all published literature and banners.  Each sponsor will also be introduced at the welcome event and if the sponsor (at the Gold level or above) is offering a special prize then the sponsor will be able to define the parameters for winning the prize to the contestants.</p>
+      <p> For example, a prize could go to the most creative design from a certain county, the best use of mapping technology, or to the contestant or team a judge feels is most worthy of their prize.</p>
+      <p class="basic_text">See below for sponsorship level details.</p>
     </div>
   </div>
   <div class="row sponsorLevels">
