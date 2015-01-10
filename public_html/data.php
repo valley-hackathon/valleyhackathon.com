@@ -15,24 +15,28 @@ $data['judges'][] = array(
   'picture' => 'ScottSmith.jpg',
   'sponsorID' => 4
 );
+/*
 $data['judges'][] = array(
   'Name'    => 'Rick Swanson',
   'Bio'     => 'Chairman of the Board at Associated Feed and Supply, Rick has been an early adopter of technology his entire life.',
   'picture' => 'RickSwanson.jpg',
   'sponsorID' => 6
 );
+*/
 $data['judges'][] = array(
   'Name'    => 'Simeon Franklin',
   'Bio'     => 'Technical Instructor at Twitter, Simeon is the founder of the Modesto Scripting Language Meetup.',
   'picture' => 'SimeonFranklin.jpg',
   'sponsorID' => 9
 );
+/*
 $data['judges'][] = array(
   'Name'    => 'Loyd Schutte',
   'Bio'     => 'Multimedia and IT Director, Interactive Design and Development, Loyd is a web guru.',
   'picture' => 'LoydSchutte.jpg',
   'sponsorID' => 10
 );
+*/
 
 
 
