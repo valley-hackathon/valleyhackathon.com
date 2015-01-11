@@ -57,7 +57,7 @@ $data['sponsors'][1] = array(
   'URL'         => 'www.rethinkdb.com',
   'Logo'        => 'RethinkDB.png',
   'Description' => 'An open-source distributed database built with love.',
-  'Text'        => 'These guys are amazing and we are thrilled to have the on board.  There is going to be a pre-hackathon event with them so keep your eye on http://www.meetup.com/Modesto-Scripting-Language-Meetup/ for more details.'
+  'Text'        => 'These guys are amazing and we are thrilled to have them on board.  There is going to be a pre-hackathon event with them in Oakdale on Wednesday, Jan 14.  <a href="http://www.meetup.com/GDG-Oakdale/events/219317732/">Click here for more details.</a>'
 );
 $data['sponsors'][2] = array(
   'Level'       => 'Gold Sponsor',
