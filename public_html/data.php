@@ -13,28 +13,28 @@ $data['judges'][] = array(
   'Name'    => 'Scott Smith',
   'Bio'     => 'VP of Product Development at Front Porch, full stack .NET developer by day and Node developer by night.',
   'picture' => 'ScottSmith.jpg',
-  'sponsorID' => 4
+  'sponsorID' => 30
 );
 /*
 $data['judges'][] = array(
   'Name'    => 'Rick Swanson',
   'Bio'     => 'Chairman of the Board at Associated Feed and Supply, Rick has been an early adopter of technology his entire life.',
   'picture' => 'RickSwanson.jpg',
-  'sponsorID' => 6
+  'sponsorID' => 51
 );
 */
 $data['judges'][] = array(
   'Name'    => 'Simeon Franklin',
   'Bio'     => 'Technical Instructor at Twitter, Simeon is the founder of the Modesto Scripting Language Meetup.',
   'picture' => 'SimeonFranklin.jpg',
-  'sponsorID' => 9
+  'sponsorID' => 90
 );
 /*
 $data['judges'][] = array(
   'Name'    => 'Loyd Schutte',
   'Bio'     => 'Multimedia and IT Director, Interactive Design and Development, Loyd is a web guru.',
   'picture' => 'LoydSchutte.jpg',
-  'sponsorID' => 10
+  'sponsorID' => 91
 );
 */
 
@@ -59,7 +59,7 @@ $data['sponsors'][1] = array(
   'Description' => 'An open-source distributed database built with love.',
   'Text'        => 'These guys are amazing and we are thrilled to have them on board.  There is going to be a pre-hackathon event with them in Oakdale on Wednesday, Jan 14.  <a href="http://www.meetup.com/GDG-Oakdale/events/219317732/">Click here for more details.</a>'
 );
-$data['sponsors'][2] = array(
+$data['sponsors'][20] = array(
   'Level'       => 'Gold Sponsor',
   'Name'        => 'Tuolumne County Innovation Lab',
   'URL'         => 'www.myinnovationlab.org',
@@ -68,7 +68,7 @@ $data['sponsors'][2] = array(
   'Text'        => 'The InnovationLab is a membership-based facility. It includes a do-it-yourself fabrication and prototyping center,
   a maker space, and a learning center. And it is in Sonora. Woot!'
 );
-$data['sponsors'][3] = array(
+$data['sponsors'][21] = array(
   'Level'       => 'Gold Sponsor',
   'Name'        => 'Inventaweb',
   'URL'         => 'inventaweb.net',
@@ -76,7 +76,7 @@ $data['sponsors'][3] = array(
   'Description' => 'Inventing your next website.',
   'Text'        => 'Inventaweb is building this nifty website for the event. Keep looking back here for more information and after the event for links to several of the projects!'
 );
-$data['sponsors'][4] = array(
+$data['sponsors'][30] = array(
   'Level'       => 'Silver Sponsor',
   'Name'        => 'Front Porch',
   'URL'         => 'frontporch.com',
@@ -84,7 +84,7 @@ $data['sponsors'][4] = array(
   'Description' => 'Subscriber Communication Solution for Service Providers',
   'Text'        => 'We are stoked about having these guys as a sponsor, and even more so about having Scott Smith as a judge!'
 );
-$data['sponsors'][5] = array(
+$data['sponsors'][50] = array(
   'Level'       => 'Bronze Sponsor',
   'Name'        => 'DataBoost',
   'URL'         => 'databoost.com',
@@ -93,7 +93,7 @@ $data['sponsors'][5] = array(
   'Text'        => 'These guys are going to be providing breakfast,
   we love breakfast therefore we love them. :-)'
 );
-$data['sponsors'][6] = array(
+$data['sponsors'][51] = array(
   'Level'       => 'Bronze Sponsor',
   'Name'        => 'Associated Feed',
   'URL'         => 'associatedfeed.com',
@@ -101,7 +101,7 @@ $data['sponsors'][6] = array(
   'Description' => 'Delivering the best feed products for your animals.',
   'Text'        => 'Not just your average feed mill. This place is a serious technology incubator.'
 );
-$data['sponsors'][7] = array(
+$data['sponsors'][52] = array(
   'Level'       => 'Bronze Sponsor',
   'Name'        => 'Marcia Herrmann Design',
   'URL'         => 'her2man2.com',
@@ -109,7 +109,15 @@ $data['sponsors'][7] = array(
   'Description' => 'Brand development, graphic design, and website and database design for the Central Valley and beyond.',
   'Text'        => 'These guys are expert designers and developers, they know the industry well.'
 );
-$data['sponsors'][8] = array(
+$data['sponsors'][53] = array(
+  'Level'       => 'Bronze Sponsor',
+  'Name'        => 'Aspire Home Real Estate',
+  'URL'         => 'aspirehm.com',
+  'Logo'        => 'Aspire.png',
+  'Description' => 'Where Dreams Soar.',
+  'Text'        => '"What I like is supporting bright minds, innovative ideas, and community oriented events."  Awesome just awesome!'
+);
+$data['sponsors'][92] = array(
   'Level'       => null,
   'Name'        => 'Stickman Ventures',
   'URL'         => 'stickmanventures.com',
@@ -117,7 +125,7 @@ $data['sponsors'][8] = array(
   'Description' => 'Build. Animate. Ship.',
   'Text'        => 'Stickman is an amazing and distributed group of technologists who produce cool things.'
 );
-$data['sponsors'][9] = array(
+$data['sponsors'][90] = array(
   'Level'       => null,
   'Name'        => 'Twitter',
   'URL'         => 'Twitter.com',
@@ -125,7 +133,7 @@ $data['sponsors'][9] = array(
   'Description' => '',
   'Text'        => ''
 );
-$data['sponsors'][10] = array(
+$data['sponsors'][91] = array(
   'Level'       => null,
   'Name'        => 'NeverBoring',
   'URL'         => 'NeverBoring.com',
