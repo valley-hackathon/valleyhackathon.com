@@ -4,9 +4,9 @@
  * Judges
  */
 $data['judges'][] = array(
-  'Name'    => 'Carl Schroder',
+  'Name'    => 'Carl Schroeder',
   'Bio'     => 'President and CEO of GeoStrategies, Carl understands the business side of technology like few in this generation.',
-  'picture' => 'CarlSchroder.jpg',
+  'picture' => 'CarlSchroeder.jpg',
   'sponsorID' => 0
 );
 $data['judges'][] = array(
