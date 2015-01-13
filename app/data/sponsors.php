@@ -1,46 +1,6 @@
 <?php
 
 /**
- * Judges
- */
-$data['judges'][] = array(
-  'Name'    => 'Carl Schroder',
-  'Bio'     => 'President and CEO of GeoStrategies, Carl understands the business side of technology like few in this generation.',
-  'picture' => 'CarlSchroder.jpg',
-  'sponsorID' => 0
-);
-$data['judges'][] = array(
-  'Name'    => 'Scott Smith',
-  'Bio'     => 'VP of Product Development at Front Porch, full stack .NET developer by day and Node developer by night.',
-  'picture' => 'ScottSmith.jpg',
-  'sponsorID' => 30
-);
-/*
-$data['judges'][] = array(
-  'Name'    => 'Rick Swanson',
-  'Bio'     => 'Chairman of the Board at Associated Feed and Supply, Rick has been an early adopter of technology his entire life.',
-  'picture' => 'RickSwanson.jpg',
-  'sponsorID' => 51
-);
-*/
-$data['judges'][] = array(
-  'Name'    => 'Simeon Franklin',
-  'Bio'     => 'Technical Instructor at Twitter, Simeon is the founder of the Modesto Scripting Language Meetup.',
-  'picture' => 'SimeonFranklin.jpg',
-  'sponsorID' => 90
-);
-/*
-$data['judges'][] = array(
-  'Name'    => 'Loyd Schutte',
-  'Bio'     => 'Multimedia and IT Director, Interactive Design and Development, Loyd is a web guru.',
-  'picture' => 'LoydSchutte.jpg',
-  'sponsorID' => 91
-);
-*/
-
-
-
-/**
  * Sponsors
  */
 $data['sponsors'][0] = array(
@@ -165,44 +125,4 @@ $data['sponsorship'][] = array(
  'Commitment'   => '$2000',
  'Introduction' => 'up to one minute',
  'Surprize'     => 'Platinum Sponsors can sponsor a surprise for the event.  Call us for more details.'
-);
-
-/**
- * Teams
- */
-$data['teams'][] = array(
-  'Name'       => 'Project Stormageddon',
-  'Frameworks' => 'Angular.js / Slim Framework',
-  'Members'    => 'Matthew Davies<br>Nathan Bunney<br>Robert Huffman<br>Jared Hill',
-  'County'     => 'Stanislaus'
-);
-$data['teams'][] = array(
-  'Name'       => 'Team 2',
-  'Frameworks' => 'Angular.js / Node.js / Koa.js',
-  'Members'    => 'James Moore<br>Joshua Chamberlain<br>Bruce Freeby',
-  'County'     => 'Stanislaus'
-);
-$data['teams'][] = array(
-  'Name'       => 'Guinea Pigs',
-  'Frameworks' => '',
-  'Members'    => 'Ed Taylor<br>Shane Powser<br>Cameron Jordan',
-  'County'     => 'Tuolumne'
-);
-$data['teams'][] = array(
-  'Name'       => 'Team 4',
-  'Frameworks' => '',
-  'Members'    => 'Mat Wood<br>Brian Blocher<br>James Williams',
-  'County'     => 'Tuolumne'
-);
-$data['teams'][] = array(
-  'Name'       => 'Team 5',
-  'Frameworks' => 'React/Node.js',
-  'Members'    => 'Bryan Garza<br>Mario Muniz<br>Brett Martin<br>Annie Yang',
-  'County'     => 'Stanislaus'
-);
-$data['teams'][] = array(
-  'Name'       => 'Team 6',
-  'Frameworks' => 'Java, Python, PHP',
-  'Members'    => 'Brandon Halpin<br>Bryan Potts<br>Michael Schilber<br>Eric Greenberg',
-  'County'     => 'Stanislaus'
 );

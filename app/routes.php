@@ -1,62 +1,18 @@
 <?php
 
-// Set the display errors and reporting levels
-ini_set('display_errors', 1);
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
+/*
+|--------------------------------------------------------------------------
+| Routes
+|--------------------------------------------------------------------------
+| This is where all the routes are defined,
+| but no code actually runs (definition code only)
+|
+*/
 
-date_default_timezone_set('America/Los_Angeles');
-
-// Require composer dependencies
-require '../vendor/autoload.php';
 use Mailgun\Mailgun;
 use ReCaptcha\Captcha;
 use ReCaptcha\CaptchaException;
 
-define('RECAPTCHAPUBLIC', '6LcNJeESAAAAACRIIHVmpwsBv_NRQmZsUaSmjqKh');
-define('RECAPTCHAPRIVATE', '6LcNJeESAAAAACcLAn0pJPF0isoI-i0e1unhg4m_');
-
-require_once('./data.php');
-
-// Prepare app
-$app = new \Slim\Slim(array(
-  'templates.path' => '../templates',
-  'debug'          => true
-));
-
-$app->add(new \Slim\Middleware\SessionCookie(array(
-    'expires' => '60 minutes',
-    'path' => '/',
-    'domain' => null,
-    'secure' => false,
-    'httponly' => false,
-    'name' => 'slim_session',
-    'secret' => 'DSAG678%^&ghjo5t&8',
-    'cipher' => MCRYPT_RIJNDAEL_256,
-    'cipher_mode' => MCRYPT_MODE_CBC
-)));
-
-// Create the view engine with Twig
-$app->view(new \Slim\Views\Twig());
-$app->view->parserOptions = array(
-  'charset'          => 'utf-8',
-  'cache'            => realpath('../templates/cache'),
-  'auto_reload'      => true,
-  'strict_variables' => false,
-  'autoescape'       => true
-);
-
-// Get the current git hash
-$slicedDirectory = array_slice(explode('/', __DIR__), -2, 1);
-$data['current_hash'] = $slicedDirectory[0];
-
-$app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
-
-// Pass the current URL
-$data['currentUrl'] = $app->request()->getPath();
-
-/**
- * Routes
- */
 $app->get('/', function () use ($app) {
   global $data;
   $data['title']       = 'Valley Hackathon';
@@ -95,11 +51,11 @@ $app->get('/signup', function () use ($app) {
   $data['description'] = 'Signup for the Valley Hackathon ';
   $data['h1']          = 'Signup for the Event';
 
-	$captcha = new Captcha();
+  $captcha = new Captcha();
 
-	$captcha->setPublicKey(RECAPTCHAPUBLIC);
-	$captcha->setPrivateKey(RECAPTCHAPRIVATE);
-	$data['captcha'] = $captcha->displayHTML();
+  $captcha->setPublicKey(RECAPTCHAPUBLIC);
+  $captcha->setPrivateKey(RECAPTCHAPRIVATE);
+  $data['captcha'] = $captcha->displayHTML();
 
   $app->render('signup.html', $data);
 });
@@ -126,30 +82,25 @@ $app->post('/register', function () use ($app) {
   $data['description'] = 'Thanks for Registering';
   $data['h1']          = 'Thanks for Registering';
 
-	$captcha = new Captcha();
+  $captcha = new Captcha();
 
-	$captcha->setPublicKey(RECAPTCHAPUBLIC);
-	$captcha->setPrivateKey(RECAPTCHAPRIVATE);
+  $captcha->setPublicKey(RECAPTCHAPUBLIC);
+  $captcha->setPrivateKey(RECAPTCHAPRIVATE);
 
   try {
-		if ( !$captcha->isValid() ) {
-			throw new CaptchaException($captcha->getError());
-		}
+    if ( !$captcha->isValid() ) {
+      throw new CaptchaException($captcha->getError());
+    }
 
-	} catch (CaptchaException $e) {
-  	//echo $e->errorMessage();
-  	//die();
+  } catch (CaptchaException $e) {
+    //echo $e->errorMessage();
+    //die();
     $app->flash('error', 'Incorrect Captcha, Please Try Again.');
     $app->flash('formData', $_POST);
     $app->redirect('/signup');
-	}
+  }
 
   $mailData=$_POST;
-/*
-  foreach($mailData as $i=>$p){
-    $mailData[$i] = mysql_real_escape_string($p);
-  }
-*/
 
   $view = $app->view();
   $view->setData('data', $mailData);
@@ -192,7 +143,3 @@ $app->get('/flier', function () use($app) {
     $res['Content-Length'] = filesize($file);
     readfile($file);
 });
-
-
-// Run app
-$app->run();
