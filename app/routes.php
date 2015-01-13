@@ -13,6 +13,9 @@ use Mailgun\Mailgun;
 use ReCaptcha\Captcha;
 use ReCaptcha\CaptchaException;
 
+global $data;
+$data['siteKeywords'] = ['hackathon', 'hack day', 'valley hackathon', 'Central Valley', 'Central Valley Hackathon'];
+
 $app->get('/', function () use ($app) {
   global $data;
   $data['title']       = 'Valley Hackathon';
@@ -25,6 +28,7 @@ $app->get('/about', function () use ($app) {
   global $data;
   $data['title']       = 'About Valley Hackathon';
   $data['description'] = 'Find out more details about the Valley Hackathon';
+  $data['keywords']    = ['About hackathon', 'About Valley Hackathon', 'About Central Valley hackathon'];
   $data['h1']          = 'About the Valley Hackathon';
   $app->render('about.html', $data);
 });
@@ -33,6 +37,7 @@ $app->get('/sponsors', function () use ($app) {
   global $data;
   $data['title']       = 'Sponsors of Valley Hackathon';
   $data['description'] = 'Sponsors of Valley Hackathon are all local companies involved in technology in one way or another.';
+  $data['keywords']    = ['Hackathon sponsors', 'Valley Hackathon sponsors', 'Central Valley hackathon sponsors'];
   $data['h1']          = 'Sponsors of the Valley Hackathon';
   $app->render('sponsors.html', $data);
 });
@@ -41,6 +46,7 @@ $app->get('/judges', function () use ($app) {
   global $data;
   $data['title']       = 'Judges of Valley Hackathon';
   $data['description'] = 'Judges of Valley Hackathon are an eclectic group of technologists, business leaders, and design experts.';
+  $data['keywords']    = ['Hackathon judges', 'Valley Hackathon judges', 'Central Valley hackathon judges'];
   $data['h1']          = 'Judges of the Valley Hackathon';
   $app->render('judges.html', $data);
 });
@@ -48,7 +54,8 @@ $app->get('/judges', function () use ($app) {
 $app->get('/signup', function () use ($app) {
   global $data;
   $data['title']       = 'Signup for Valley Hackathon';
-  $data['description'] = 'Signup for the Valley Hackathon ';
+  $data['description'] = 'Signup for the Valley Hackathon';
+  $data['keywords']    = ['Hackathon signup', 'Valley Hackathon signup', 'Central Valley hackathon signup'];
   $data['h1']          = 'Signup for the Event';
 
   $captcha = new Captcha();
@@ -64,6 +71,7 @@ $app->get('/teams', function () use ($app) {
   global $data;
   $data['title']       = 'Valley Hackathon Teams';
   $data['description'] = 'Check out the current teams for the Valley Hackathon';
+  $data['keywords']    = ['Hackathon teams', 'Valley Hackathon teams', 'Central Valley hackathon teams'];
   $data['h1']          = 'Current Teams';
   $app->render('teams.html', $data);
 });
@@ -72,6 +80,7 @@ $app->get('/prizes', function () use ($app) {
   global $data;
   $data['title']       = 'Valley Hackathon Prizes';
   $data['description'] = 'Check out the prizes for the Valley Hackathon';
+  $data['keywords']    = ['Hackathon prizes', 'Valley Hackathon prizes', 'Central Valley hackathon prizes'];
   $data['h1']          = 'Current Prizes';
   $app->render('prizes.html', $data);
 });
