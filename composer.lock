@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c8c8eb183ef989eda52cb4b283bf8eef",
+    "hash": "95a39490f2b9d1c395ee798a502a6da0",
     "packages": [
         {
             "name": "danielmewes/php-rql",
-            "version": "dev-master",
+            "version": "1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/danielmewes/php-rql.git",
-                "reference": "c4ebfe919d818fff43fad1be1b3a7fa6dd13d05d"
+                "reference": "f8102ba96d25028e7a1d6c17f29113287c95b774"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/danielmewes/php-rql/zipball/c4ebfe919d818fff43fad1be1b3a7fa6dd13d05d",
-                "reference": "c4ebfe919d818fff43fad1be1b3a7fa6dd13d05d",
+                "url": "https://api.github.com/repos/danielmewes/php-rql/zipball/f8102ba96d25028e7a1d6c17f29113287c95b774",
+                "reference": "f8102ba96d25028e7a1d6c17f29113287c95b774",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,7 @@
                 "reql",
                 "rethinkdb"
             ],
-            "time": "2014-12-10 02:48:17"
+            "time": "2014-10-01 22:15:54"
         },
         {
             "name": "guzzle/guzzle",
@@ -594,9 +594,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "danielmewes/php-rql": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
