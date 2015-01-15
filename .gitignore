@@ -30,3 +30,4 @@ composer.phar
 # Other stuff
 public_html/error_log
 psd_files
+.env.php

@@ -60,8 +60,8 @@ $app->get('/signup', function () use ($app) {
 
   $captcha = new Captcha();
 
-  $captcha->setPublicKey(RECAPTCHAPUBLIC);
-  $captcha->setPrivateKey(RECAPTCHAPRIVATE);
+  $captcha->setPublicKey($app->config('RECAPTCHAPUBLIC'));
+  $captcha->setPrivateKey($app->config('RECAPTCHAPRIVATE'));
   $data['captcha'] = $captcha->displayHTML();
 
   $app->render('signup.html', $data);
@@ -93,8 +93,8 @@ $app->post('/register', function () use ($app) {
 
   $captcha = new Captcha();
 
-  $captcha->setPublicKey(RECAPTCHAPUBLIC);
-  $captcha->setPrivateKey(RECAPTCHAPRIVATE);
+  $captcha->setPublicKey($app->config('RECAPTCHAPUBLIC'));
+  $captcha->setPrivateKey($app->config('RECAPTCHAPRIVATE'));
 
   try {
     if ( !$captcha->isValid() ) {
@@ -109,28 +109,23 @@ $app->post('/register', function () use ($app) {
     $app->redirect('/signup');
   }
 
-  $mailData=$_POST;
+  $mailData = $_POST;
 
   $view = $app->view();
   $view->setData('data', $mailData);
   $email_content = $view->render('email.html');
 
-  $mg = new Mailgun("key-172019857fe194754e04c77c0f97c847");
-  $domain = "valleyhackathon.com";
+  $mailgun = new Mailgun($app->config('MAILGUN_KEY'));
 
-  $mg->sendMessage($domain, array('from'    => 'team_signup@ValleyHackathon.com',
-                                  'to'      => 'geektech2000@gmail.com',
-                                  'subject' => 'New Team Signup!',
-                                  'html'    => $email_content,
-                                  'text'    => strip_tags($email_content)
-                                  ));
-
-  $mg->sendMessage($domain, array('from'    => 'team_signup@ValleyHackathon.com',
-                                  'to'      => 'ben@geostrategies.com',
-                                  'subject' => 'New Team Signup!',
-                                  'html'    => $email_content,
-                                  'text'    => strip_tags($email_content)
-                                  ));
+  $mailgun->sendMessage(
+    $app->config('MAILGUN_DOMAIN'),
+    array(
+      'from' => 'team_signup@ValleyHackathon.com',
+      'to'      => ['daviesgeek@gmail.com', 'matthew@geostrategies.com'],
+      'subject' => 'New Team Signup!',
+      'html'    => $email_content,
+      'text'    => strip_tags($email_content)
+  ));
 
 
   $app->render('register.html', $data);

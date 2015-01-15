@@ -1,10 +1,11 @@
 {
   "require": {
+    "danielmewes/php-rql": "dev-master",
+    "mailgun/mailgun-php": "~1.7.2",
+    "recaptcha-lib/recaptcha": "0.1.2",
     "slim/slim": "2.*",
     "slim/views": "0.1.*",
     "slim/extras": "*",
-    "mailgun/mailgun-php": "~1.7.2",
-    "twig/twig": "1.*",
-    "recaptcha-lib/recaptcha": "0.1.2"
+    "twig/twig": "1.*"
   }
 }

@@ -10,11 +10,8 @@
 |
 */
 
-// Create the app
-$app = new \Slim\Slim(array(
-  'templates.path' => __DIR__.'/templates',
-  'debug'          => true
-));
+// Create the app and load the configuration
+$app = new \Slim\Slim(require __DIR__.'/configuration.php');
 
 // Add the session middleware
 $app->add(new \Slim\Middleware\SessionCookie(array(
@@ -23,7 +20,7 @@ $app->add(new \Slim\Middleware\SessionCookie(array(
     'domain' => null,
     'secure' => false,
     'httponly' => false,
-    'name' => 'slim_session',
+    'name' => 'valleyhackathon_session',
     'secret' => 'DSAG678%^&ghjo5t&8',
     'cipher' => MCRYPT_RIJNDAEL_256,
     'cipher_mode' => MCRYPT_MODE_CBC
