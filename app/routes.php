@@ -13,10 +13,10 @@ use Mailgun\Mailgun;
 use ReCaptcha\Captcha;
 use ReCaptcha\CaptchaException;
 
-$app->view->setData(['hackathon', 'hack day', 'valley hackathon', 'Central Valley', 'Central Valley Hackathon']);
+View::setData(['hackathon', 'hack day', 'valley hackathon', 'Central Valley', 'Central Valley Hackathon']);
 
-$app->get('/', function () use ($app) {
-  $app->view->setData(array(
+App::get('/', function () use($app) {
+  View::setData(array(
     'title'       => 'Valley Hackathon',
     'description' => 'The Valley Hackathon is a locals only hackathon designed to show local employers that there are high quality programmers right here in the Central Valley of California.',
     'h1'          => 'Turlock Hackathon'
@@ -24,8 +24,8 @@ $app->get('/', function () use ($app) {
   $app->render('index.html');
 });
 
-$app->get('/about', function () use ($app) {
-  $app->view->setData(array(
+App::get('/about', function () use($app) {
+  View::setData(array(
     'title'       => 'About Valley Hackathon',
     'description' => 'Find out more details about the Valley Hackathon',
     'keywords'    => ['About hackathon', 'About Valley Hackathon', 'About Central Valley hackathon'],
@@ -34,8 +34,8 @@ $app->get('/about', function () use ($app) {
   $app->render('about.html');
 });
 
-$app->get('/sponsors', function () use ($app) {
-  $app->view->setData(array(
+App::get('/sponsors', function () use($app) {
+  View::setData(array(
     'title'       => 'Sponsors of Valley Hackathon',
     'description' => 'Sponsors of Valley Hackathon are all local companies involved in technology in one way or another.',
     'keywords'    => ['Hackathon sponsors', 'Valley Hackathon sponsors', 'Central Valley hackathon sponsors'],
@@ -44,8 +44,8 @@ $app->get('/sponsors', function () use ($app) {
   $app->render('sponsors.html');
 });
 
-$app->get('/judges', function () use ($app) {
-  $app->view->setData(array(
+App::get('/judges', function () use($app) {
+  View::setData(array(
     'title'       => 'Judges of Valley Hackathon',
     'description' => 'Judges of Valley Hackathon are an eclectic group of technologists, business leaders, and design experts.',
     'keywords'    => ['Hackathon judges', 'Valley Hackathon judges', 'Central Valley hackathon judges'],
@@ -54,8 +54,8 @@ $app->get('/judges', function () use ($app) {
   $app->render('judges.html');
 });
 
-$app->get('/signup', function () use ($app) {
-  $app->view->setData(array(
+App::get('/signup', function () use($app) {
+  View::setData(array(
     'title'       => 'Signup for Valley Hackathon',
     'description' => 'Signup for the Valley Hackathon',
     'keywords'    => ['Hackathon signup', 'Valley Hackathon signup', 'Central Valley hackathon signup'],
@@ -64,16 +64,16 @@ $app->get('/signup', function () use ($app) {
 
   $captcha = new Captcha();
 
-  $captcha->setPublicKey($app->config('RECAPTCHAPUBLIC'));
-  $captcha->setPrivateKey($app->config('RECAPTCHAPRIVATE'));
+  $captcha->setPublicKey(Config::get('RECAPTCHAPUBLIC'));
+  $captcha->setPrivateKey(Config::get('RECAPTCHAPRIVATE'));
 
-  $app->view->setData('captcha', $captcha->displayHTML());
+  View::setData('captcha', $captcha->displayHTML());
 
   $app->render('signup.html');
 });
 
-$app->get('/teams', function () use ($app) {
-  $app->view->setData(array(
+App::get('/teams', function () use($app) {
+  View::setData(array(
     'title'       => 'Valley Hackathon Teams',
     'description' => 'Check out the current teams for the Valley Hackathon',
     'keywords'    => ['Hackathon teams', 'Valley Hackathon teams', 'Central Valley hackathon teams'],
@@ -82,8 +82,8 @@ $app->get('/teams', function () use ($app) {
   $app->render('teams.html');
 });
 
-$app->get('/prizes', function () use ($app) {
-  $app->view->setData(array(
+App::get('/prizes', function () use($app) {
+  View::setData(array(
     'title'       => 'Valley Hackathon Prizes',
     'description' => 'Check out the prizes for the Valley Hackathon',
     'keywords'    => ['Hackathon prizes', 'Valley Hackathon prizes', 'Central Valley hackathon prizes'],
@@ -92,8 +92,8 @@ $app->get('/prizes', function () use ($app) {
   $app->render('prizes.html');
 });
 
-$app->post('/register', function () use ($app) {
-  $app->view->setData(array(
+$app->post('/register', function () use($app) {
+  View::setData(array(
     'title'       => 'Thanks for Registering',
     'description' => 'Thanks for Registering',
     'h1'          => 'Thanks for Registering'
@@ -101,8 +101,8 @@ $app->post('/register', function () use ($app) {
 
   $captcha = new Captcha();
 
-  $captcha->setPublicKey($app->config('RECAPTCHAPUBLIC'));
-  $captcha->setPrivateKey($app->config('RECAPTCHAPRIVATE'));
+  $captcha->setPublicKey(Config::get('RECAPTCHAPUBLIC'));
+  $captcha->setPrivateKey(Config::get('RECAPTCHAPRIVATE'));
 
   try {
     if ( !$captcha->isValid() ) {
@@ -120,10 +120,10 @@ $app->post('/register', function () use ($app) {
   $view->setData('data', $mailData);
   $email_content = $view->render('email.html');
 
-  $mailgun = new Mailgun($app->config('MAILGUN_KEY'));
+  $mailgun = new Mailgun(Config::get('MAILGUN_KEY'));
 
   $mailgun->sendMessage(
-    $app->config('MAILGUN_DOMAIN'),
+    Config::get('MAILGUN_DOMAIN'),
     array(
       'from' => 'team_signup@ValleyHackathon.com',
       'to'      => ['daviesgeek@gmail.com', 'matthew@geostrategies.com'],
@@ -134,12 +134,12 @@ $app->post('/register', function () use ($app) {
   $app->render('register.html');
 });
 
-$app->get('/speed-test', function () use ($app) {
+App::get('/speed-test', function () use($app) {
 });
 
-$app->get('/flier', function () use($app) {
+App::get('/flier', function () use($app) {
     $file = '/home/valleyh/files/ValleyHackathonFlier.pdf';
-    $res = $app->response();
+    $res = App::response();
     $res['Content-Description'] = 'File Transfer';
     $res['Content-Type'] = 'application/pdf';
     $res['Content-Disposition'] ='attachment; filename=' . basename($file);

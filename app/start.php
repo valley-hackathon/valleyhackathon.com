@@ -10,8 +10,14 @@
 |
 */
 
+use SlimFacades\Facade;
+
 // Create the app and load the configuration
 $app = new \Slim\Slim(require __DIR__.'/configuration.php');
+
+// Register the facades
+Facade::setFacadeApplication($app);
+Facade::registerAliases();
 
 // Load the database
 $app->container->singleton('db', function() use ($app) {
