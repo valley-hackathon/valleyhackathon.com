@@ -13,6 +13,13 @@
 // Create the app and load the configuration
 $app = new \Slim\Slim(require __DIR__.'/configuration.php');
 
+// Load the database
+$app->container->singleton('db', function() use ($app) {
+  $database = r\connect($app->config('RETHINK_HOST'));
+  $database->useDb($app->config('RETHINK_DATABASE'));
+  return $database;
+});
+
 // Add the session middleware
 $app->add(new \Slim\Middleware\SessionCookie(array(
     'expires' => '60 minutes',
