@@ -44,22 +44,19 @@ $app->view->parserOptions = array(
 );
 $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 
-// All the templating data will be passed into here
-global $data;
-
-// Load the data files
-require __DIR__.'/data/judges.php';
-require __DIR__.'/data/sponsors.php';
-require __DIR__.'/data/teams.php';
+// Load the data files into the view
+$app->view->setData(array('judges' => require __DIR__.'/data/judges.php'));
+$app->view->setData(array('teams' => require __DIR__.'/data/teams.php'));
+$app->view->setData(require __DIR__.'/data/sponsors.php');
 
 // Get the current git hash
 // This is so the git hash can be put at the bottom of the page
 //    in comments so that it's easier to debug
 $slicedDirectory = array_slice(explode('/', __DIR__), -2, 1);
-$data['current_hash'] = $slicedDirectory[0];
+$app->view->setData('current_hash', $slicedDirectory[0]);
 
 // Pass the current URL
-$data['currentUrl'] = $app->request()->getPath();
+$app->view->setData('currentUrl', $app->request()->getPath());
 
 // Load the routes
 require_once __DIR__.'/routes.php';

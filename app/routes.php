@@ -13,83 +13,91 @@ use Mailgun\Mailgun;
 use ReCaptcha\Captcha;
 use ReCaptcha\CaptchaException;
 
-global $data;
-$data['siteKeywords'] = ['hackathon', 'hack day', 'valley hackathon', 'Central Valley', 'Central Valley Hackathon'];
+$app->view->setData(['hackathon', 'hack day', 'valley hackathon', 'Central Valley', 'Central Valley Hackathon']);
 
 $app->get('/', function () use ($app) {
-  global $data;
-  $data['title']       = 'Valley Hackathon';
-  $data['description'] = 'The Valley Hackathon is a locals only hackathon designed to show local employers that there are high quality programmers right here in the Central Valley of California.';
-  $data['h1']          = 'Turlock Hackathon';
-  $app->render('index.html', $data);
+  $app->view->setData(array(
+    'title'       => 'Valley Hackathon',
+    'description' => 'The Valley Hackathon is a locals only hackathon designed to show local employers that there are high quality programmers right here in the Central Valley of California.',
+    'h1'          => 'Turlock Hackathon'
+  ));
+  $app->render('index.html');
 });
 
 $app->get('/about', function () use ($app) {
-  global $data;
-  $data['title']       = 'About Valley Hackathon';
-  $data['description'] = 'Find out more details about the Valley Hackathon';
-  $data['keywords']    = ['About hackathon', 'About Valley Hackathon', 'About Central Valley hackathon'];
-  $data['h1']          = 'About the Valley Hackathon';
-  $app->render('about.html', $data);
+  $app->view->setData(array(
+    'title'       => 'About Valley Hackathon',
+    'description' => 'Find out more details about the Valley Hackathon',
+    'keywords'    => ['About hackathon', 'About Valley Hackathon', 'About Central Valley hackathon'],
+    'h1'          => 'About the Valley Hackathon'
+  ));
+  $app->render('about.html');
 });
 
 $app->get('/sponsors', function () use ($app) {
-  global $data;
-  $data['title']       = 'Sponsors of Valley Hackathon';
-  $data['description'] = 'Sponsors of Valley Hackathon are all local companies involved in technology in one way or another.';
-  $data['keywords']    = ['Hackathon sponsors', 'Valley Hackathon sponsors', 'Central Valley hackathon sponsors'];
-  $data['h1']          = 'Sponsors of the Valley Hackathon';
-  $app->render('sponsors.html', $data);
+  $app->view->setData(array(
+    'title'       => 'Sponsors of Valley Hackathon',
+    'description' => 'Sponsors of Valley Hackathon are all local companies involved in technology in one way or another.',
+    'keywords'    => ['Hackathon sponsors', 'Valley Hackathon sponsors', 'Central Valley hackathon sponsors'],
+    'h1'          => 'Sponsors of the Valley Hackathon'
+  ));
+  $app->render('sponsors.html');
 });
 
 $app->get('/judges', function () use ($app) {
-  global $data;
-  $data['title']       = 'Judges of Valley Hackathon';
-  $data['description'] = 'Judges of Valley Hackathon are an eclectic group of technologists, business leaders, and design experts.';
-  $data['keywords']    = ['Hackathon judges', 'Valley Hackathon judges', 'Central Valley hackathon judges'];
-  $data['h1']          = 'Judges of the Valley Hackathon';
-  $app->render('judges.html', $data);
+  $app->view->setData(array(
+    'title'       => 'Judges of Valley Hackathon',
+    'description' => 'Judges of Valley Hackathon are an eclectic group of technologists, business leaders, and design experts.',
+    'keywords'    => ['Hackathon judges', 'Valley Hackathon judges', 'Central Valley hackathon judges'],
+    'h1'          => 'Judges of the Valley Hackathon'
+  ));
+  $app->render('judges.html');
 });
 
 $app->get('/signup', function () use ($app) {
-  global $data;
-  $data['title']       = 'Signup for Valley Hackathon';
-  $data['description'] = 'Signup for the Valley Hackathon';
-  $data['keywords']    = ['Hackathon signup', 'Valley Hackathon signup', 'Central Valley hackathon signup'];
-  $data['h1']          = 'Signup for the Event';
+  $app->view->setData(array(
+    'title'       => 'Signup for Valley Hackathon',
+    'description' => 'Signup for the Valley Hackathon',
+    'keywords'    => ['Hackathon signup', 'Valley Hackathon signup', 'Central Valley hackathon signup'],
+    'h1'          => 'Signup for the Event'
+  ));
 
   $captcha = new Captcha();
 
   $captcha->setPublicKey($app->config('RECAPTCHAPUBLIC'));
   $captcha->setPrivateKey($app->config('RECAPTCHAPRIVATE'));
-  $data['captcha'] = $captcha->displayHTML();
 
-  $app->render('signup.html', $data);
+  $app->view->setData('captcha', $captcha->displayHTML());
+
+  $app->render('signup.html');
 });
 
 $app->get('/teams', function () use ($app) {
-  global $data;
-  $data['title']       = 'Valley Hackathon Teams';
-  $data['description'] = 'Check out the current teams for the Valley Hackathon';
-  $data['keywords']    = ['Hackathon teams', 'Valley Hackathon teams', 'Central Valley hackathon teams'];
-  $data['h1']          = 'Current Teams';
-  $app->render('teams.html', $data);
+  $app->view->setData(array(
+    'title'       => 'Valley Hackathon Teams',
+    'description' => 'Check out the current teams for the Valley Hackathon',
+    'keywords'    => ['Hackathon teams', 'Valley Hackathon teams', 'Central Valley hackathon teams'],
+    'h1'          => 'Current Teams'
+  ));
+  $app->render('teams.html');
 });
 
 $app->get('/prizes', function () use ($app) {
-  global $data;
-  $data['title']       = 'Valley Hackathon Prizes';
-  $data['description'] = 'Check out the prizes for the Valley Hackathon';
-  $data['keywords']    = ['Hackathon prizes', 'Valley Hackathon prizes', 'Central Valley hackathon prizes'];
-  $data['h1']          = 'Current Prizes';
-  $app->render('prizes.html', $data);
+  $app->view->setData(array(
+    'title'       => 'Valley Hackathon Prizes',
+    'description' => 'Check out the prizes for the Valley Hackathon',
+    'keywords'    => ['Hackathon prizes', 'Valley Hackathon prizes', 'Central Valley hackathon prizes'],
+    'h1'          => 'Current Prizes'
+  ));
+  $app->render('prizes.html');
 });
 
 $app->post('/register', function () use ($app) {
-  global $data;
-  $data['title']       = 'Thanks for Registering';
-  $data['description'] = 'Thanks for Registering';
-  $data['h1']          = 'Thanks for Registering';
+  $app->view->setData(array(
+    'title'       => 'Thanks for Registering',
+    'description' => 'Thanks for Registering',
+    'h1'          => 'Thanks for Registering'
+  ));
 
   $captcha = new Captcha();
 
@@ -100,10 +108,7 @@ $app->post('/register', function () use ($app) {
     if ( !$captcha->isValid() ) {
       throw new CaptchaException($captcha->getError());
     }
-
   } catch (CaptchaException $e) {
-    //echo $e->errorMessage();
-    //die();
     $app->flash('error', 'Incorrect Captcha, Please Try Again.');
     $app->flash('formData', $_POST);
     $app->redirect('/signup');
@@ -126,9 +131,7 @@ $app->post('/register', function () use ($app) {
       'html'    => $email_content,
       'text'    => strip_tags($email_content)
   ));
-
-
-  $app->render('register.html', $data);
+  $app->render('register.html');
 });
 
 $app->get('/speed-test', function () use ($app) {

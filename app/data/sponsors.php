@@ -126,3 +126,5 @@ $data['sponsorship'][] = array(
  'Introduction' => 'up to one minute',
  'Surprize'     => 'Platinum Sponsors can sponsor a surprise for the event.  Call us for more details.'
 );
+
+return $data;
