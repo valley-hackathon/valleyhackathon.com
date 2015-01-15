@@ -24,7 +24,7 @@ cd $WORKTREE
 echo $'\e[1G'"\e[0;32mInstalling Composer dependencies...\e[0m"
 
 # Install all the composer dependencies
-composer install
+composer install --no-dev --optimize-autoloader
 
 # Make sure the permissions are correct
 find . -type d -print0 | xargs -0 chmod 0755 # for directories
