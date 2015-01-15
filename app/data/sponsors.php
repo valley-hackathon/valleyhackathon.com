@@ -77,29 +77,43 @@ $data['sponsors'][53] = array(
   'Description' => 'Where Dreams Soar.',
   'Text'        => '"What I like is supporting bright minds, innovative ideas, and community oriented events."  Awesome just awesome!'
 );
-$data['sponsors'][92] = array(
+$data['sponsors'][54] = array(
   'Level'       => null,
+  'Name'        => 'Turlock Direct',
+  'URL'         => 'TurlockDirect.com',
+  'Logo'        => 'TurlockDirect.jpg',
+  'Description' => 'Shop Local and Save Money',
+  'Text'        => 'The Saturday afternoon surprise is sponsored by these fine folks, yum.'
+);
+$data['sponsors'][92] = array(
+  'Level'       => 'Bronze Sponsor',
   'Name'        => 'Stickman Ventures',
   'URL'         => 'stickmanventures.com',
   'Logo'        => 'stickmanventures.png',
   'Description' => 'Build. Animate. Ship.',
-  'Text'        => 'Stickman is an amazing and distributed group of technologists who produce cool things.'
+  'Text'        => 'Stickman is an amazing and distributed group of technologists who produce cool things.',
+  'NotLive'     => true
 );
+
+//Non Sponsors
 $data['sponsors'][90] = array(
-  'Level'       => null,
+  'Level'       => 'Bronze Sponsor',
   'Name'        => 'Twitter',
   'URL'         => 'Twitter.com',
   'Logo'        => 'Twitter.png',
   'Description' => '',
-  'Text'        => ''
+  'Text'        => '',
+  'NotLive'     => true
 );
+
 $data['sponsors'][91] = array(
   'Level'       => null,
-  'Name'        => 'NeverBoring',
+  'Name'        => 'NeverBoring!',
   'URL'         => 'NeverBoring.com',
   'Logo'        => 'neverboring.png',
   'Description' => '',
-  'Text'        => ''
+  'Text'        => '',
+  'NotLive'     => true
 );
 
 /**
