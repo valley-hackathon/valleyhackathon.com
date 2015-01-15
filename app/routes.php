@@ -126,7 +126,7 @@ $app->post('/register', function () use($app) {
     Config::get('MAILGUN_DOMAIN'),
     array(
       'from' => 'team_signup@ValleyHackathon.com',
-      'to'      => ['daviesgeek@gmail.com', 'matthew@geostrategies.com'],
+      'to'      => ['geektech2000@gmail.com', 'ben@geostrategies.com'],
       'subject' => 'New Team Signup!',
       'html'    => $email_content,
       'text'    => strip_tags($email_content)
