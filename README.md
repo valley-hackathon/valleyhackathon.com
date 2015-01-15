@@ -3,7 +3,7 @@
 The primary code base is hosted on GitHub. First clone the repository by running:
 
 ```bash
-  git clone valley-hackathon/valleyhackathon.com
+  git clone vgit@github.com:valley-hackathon/valleyhackathon.com.git
 ```
 
 Then add the server remote by running:
@@ -27,7 +27,7 @@ Then deploy to the server:
 If you want to deploy and push to Bitbucket at the same time:
 
 ```bash
-  git remote set-url origin --add --push git@bitbucket.org:daviesgeek/valleyhackathon.com.git && git remote set-url origin --add --push <server-remote>
+  git remote set-url origin --add --push git@github.com:valley-hackathon/valleyhackathon.com.git && git remote set-url origin --add --push <server-remote>
 ```
 
 Then, to push to Bitbucket and deploy:
