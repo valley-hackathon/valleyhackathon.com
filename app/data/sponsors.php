@@ -101,6 +101,22 @@ $data['sponsors'][56] = array(
   'Description' => 'Google Developers Groups from Oakdale and Modesto.',
   'Text'        => 'These guys have been awesome in the lead up to the event.  They hosted two pre-hackathon meetups that are going to make the event way better!',
 );
+$data['sponsors'][57] = array(
+  'Level'       => 'Bronze Sponsor',
+  'Name'        => 'Charter Communications',
+  'URL'         => 'https://www.charter.com/',
+  'Logo'        => 'charter.jpg',
+  'Description' => 'Turlock\'s Premier Internet Provider',
+  'Text'        => 'These guys are bringing in the fat pipe for us, plus they are providing Pizza and Sodas.  Woot for Charter!',
+);
+$data['sponsors'][58] = array(
+  'Level'       => 'Bronze Sponsor',
+  'Name'        => 'Lakeshore Technology',
+  'URL'         => 'http://www.lakeshoretechnology.co/',
+  'Logo'        => 'lakeshore2.jpg',
+  'Description' => 'Lakeshore Technology is an Information Security Consulting Company.',
+  'Text'        => 'Can you say energy drinks and snacks!',
+);
 
 //Non Sponsors
 $data['sponsors'][90] = array(
