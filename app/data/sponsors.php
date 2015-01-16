@@ -78,7 +78,7 @@ $data['sponsors'][53] = array(
   'Text'        => '"What I like is supporting bright minds, innovative ideas, and community oriented events."  Awesome just awesome!'
 );
 $data['sponsors'][54] = array(
-  'Level'       => null,
+  'Level'       => 'Bronze Sponsor',
   'Name'        => 'Turlock Direct',
   'URL'         => 'TurlockDirect.com',
   'Logo'        => 'TurlockDirect.jpg',
@@ -86,7 +86,7 @@ $data['sponsors'][54] = array(
   'Text'        => 'The Saturday afternoon surprise is sponsored by these fine folks, yum.'
 );
 $data['sponsors'][92] = array(
-  'Level'       => 'Bronze Sponsor',
+  'Level'       => null,
   'Name'        => 'Stickman Ventures',
   'URL'         => 'stickmanventures.com',
   'Logo'        => 'stickmanventures.png',
@@ -97,7 +97,7 @@ $data['sponsors'][92] = array(
 
 //Non Sponsors
 $data['sponsors'][90] = array(
-  'Level'       => 'Bronze Sponsor',
+  'Level'       => null,
   'Name'        => 'Twitter',
   'URL'         => 'Twitter.com',
   'Logo'        => 'Twitter.png',
