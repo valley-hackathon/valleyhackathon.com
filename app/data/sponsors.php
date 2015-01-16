@@ -85,14 +85,21 @@ $data['sponsors'][54] = array(
   'Description' => 'Shop Local and Save Money',
   'Text'        => 'The Saturday afternoon surprise is sponsored by these fine folks, yum.'
 );
-$data['sponsors'][92] = array(
-  'Level'       => null,
-  'Name'        => 'Stickman Ventures',
-  'URL'         => 'stickmanventures.com',
-  'Logo'        => 'stickmanventures.png',
-  'Description' => 'Build. Animate. Ship.',
-  'Text'        => 'Stickman is an amazing and distributed group of technologists who produce cool things.',
-  'NotLive'     => true
+$data['sponsors'][55] = array(
+  'Level'       => 'Bronze Sponsor',
+  'Name'        => 'Modesto Scripting Language Meetup',
+  'URL'         => 'http://www.meetup.com/Modesto-Scripting-Language-Meetup/',
+  'Logo'        => 'mslm.jpg',
+  'Description' => 'This is Modesto\'s scripting language meetup',
+  'Text'        => 'This is where it all started.  This is the initial sponsor group for the Hackathon.',
+);
+$data['sponsors'][56] = array(
+  'Level'       => 'Bronze Sponsor',
+  'Name'        => 'Oakdale and Modesto Google Developers Groups',
+  'URL'         => 'http://www.meetup.com/GDG-Oakdale/',
+  'Logo'        => 'gdg.jpg',
+  'Description' => 'Google Developers Groups from Oakdale and Modesto.',
+  'Text'        => 'These guys have been awesome in the lead up to the event.  They hosted two pre-hackathon meetups that are going to make the event way better!',
 );
 
 //Non Sponsors
@@ -113,6 +120,15 @@ $data['sponsors'][91] = array(
   'Logo'        => 'neverboring.png',
   'Description' => '',
   'Text'        => '',
+  'NotLive'     => true
+);
+$data['sponsors'][92] = array(
+  'Level'       => null,
+  'Name'        => 'Stickman Ventures',
+  'URL'         => 'stickmanventures.com',
+  'Logo'        => 'stickmanventures.png',
+  'Description' => 'Build. Animate. Ship.',
+  'Text'        => 'Stickman is an amazing and distributed group of technologists who produce cool things.',
   'NotLive'     => true
 );
 
