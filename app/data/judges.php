@@ -29,13 +29,11 @@ $judges[] = array(
   'picture' => 'SimeonFranklin.jpg',
   'sponsorID' => 90
 );
-/*
 $judges[] = array(
-  'Name'    => 'Loyd Schutte',
-  'Bio'     => 'Multimedia and IT Director, Interactive Design and Development, Loyd is a web guru.',
-  'picture' => 'LoydSchutte.jpg',
-  'sponsorID' => 91
+  'Name'    => 'Phillip Lan',
+  'Bio'     => 'Head of Digital Marketing Management & Strategy for a MAJOR local winery.',
+  'picture' => 'PhillipLan.jpg',
+  'sponsorID' => 9999
 );
-*/
 
 return $judges;
