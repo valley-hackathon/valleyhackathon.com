@@ -18,10 +18,12 @@
     <div class="col-md-5">
       <h2>{{judge.Name}}</h2>
       <br>
+      {% if judge.sponsorID != 9999 %}
       {% set sponsor = sponsors[judge.sponsorID] %}
       <a href="http://{{sponsor.URL}}">
         <img src="img/{{sponsor.Logo}}" alt="{{sponsor.Name}}" class="maxWidth" />
       </a>
+      {% endif %}
     </div>
     <div class="col-md-4 judgeBio">
       {{judge.Bio}}
