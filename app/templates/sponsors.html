@@ -32,7 +32,25 @@
         </div>
       </div>
     {% endfor %}
+      <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Mentors</span></h2></div>
+      <p>The guys from Stickman ventures (including a Google Expert on Wearables) will be at the event to assist teams and mentor contestents.</p>
+      {% set sponsor = sponsors[92] %}
+      <div class="row sponsor">
+        <div class="col-md-3">
+          <a href="http://{{sponsor.URL}}">
+            <img src="img/{{sponsor.Logo}}" alt="{{sponsor.Name}}" class="maxWidth" />
+          </a>
+        </div>
+        <div class="col-md-4">
+          {{sponsor.Description|raw}}
+        </div>
+        <div class="col-md-5">
+          {{sponsor.Text|raw}}
+        </div>
+      </div>
     </div>
+
+
     <div class="col-md-4">
       <h2>Interested in Sponsoring?</h2>
       <p class="basic_text">We are were looking for our sponsors to come from a mix of local companies that are interested in technology and in meeting some of the best programmers, graphic artists, and other technical folk that the valley has to offer.  The Valley Hackathon is seeking to incubate new ventures and support existing ones by creating a focal point in the valley for technologists and business to converge.</p>
