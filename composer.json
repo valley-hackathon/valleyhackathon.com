@@ -12,7 +12,8 @@
   },
   "autoload": {
     "classmap": [
-      "app/controllers"
+      "app/controllers",
+      "app/facades"
     ]
   }
 }

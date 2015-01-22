@@ -12,12 +12,15 @@
 
 use SlimFacades\Facade;
 
+require __DIR__.'/Database.php';
+
 // Create the app and load the configuration
 $app = new \Slim\Slim(require __DIR__.'/configuration.php');
 
 // Register the facades
 Facade::setFacadeApplication($app);
 Facade::registerAliases();
+Facade::registerAliases(array('DB' => '\Facades\DBFacade'));
 
 // Load the database
 $app->container->singleton('db', function() use ($app) {

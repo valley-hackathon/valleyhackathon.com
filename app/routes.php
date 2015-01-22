@@ -15,7 +15,7 @@ use ReCaptcha\CaptchaException;
 
 View::setData(['hackathon', 'hack day', 'valley hackathon', 'Central Valley', 'Central Valley Hackathon']);
 
-App::get('/', function () use($app) {
+App::get('/', function () use($app){
   View::setData(array(
     'title'       => 'Valley Hackathon',
     'description' => 'The Valley Hackathon is a locals only hackathon designed to show local employers that there are high quality programmers right here in the Central Valley of California.',
@@ -149,4 +149,9 @@ App::get('/flier', function () use($app) {
     $res['Pragma'] = 'public';
     $res['Content-Length'] = filesize($file);
     readfile($file);
+});
+
+App::get('/database', function() use($app) {
+  DB::table('data')->run();
+  // \r\table('data')->run($app->db);
 });
