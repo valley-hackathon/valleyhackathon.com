@@ -1,3 +1,10 @@
+::selection {
+  background: #FE563B;
+}
+::-moz-selection {
+  background: #FE563B;
+}
+
 /* Site */
 body {
   background:#fff url(../img/bg_dark.png);
