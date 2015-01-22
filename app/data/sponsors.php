@@ -7,7 +7,7 @@ $data['sponsors'][0] = array(
   'Level'       => 'Founding Sponsor',
   'Name'        => 'GeoStrategies',
   'URL'         => 'http://geostrategies.com/',
-  'Logo'        => 'geostrategies.png',
+  'Logo'        => 'geostrategies.jpg',
   'Description' => 'Tactical Strategies. Actionable Intelligence.',
   'Text'        => 'GeoStrategies is the founding sponsor. They are giving us food and a place to hold the contest. Without them there would be no contest. These guys are awesome!'
 );
