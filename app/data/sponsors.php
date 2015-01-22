@@ -147,6 +147,15 @@ $data['sponsors'][92] = array(
   'Text'        => 'Stickman is an amazing and distributed group of technologists who produce cool things.',
   'NotLive'     => true
 );
+$data['sponsors'][93] = array(
+  'Level'       => null,
+  'Name'        => 'E&J Gallo Winery',
+  'URL'         => 'gallo.com',
+  'Logo'        => 'gallo.gif',
+  'Description' => '',
+  'Text'        => '',
+  'NotLive'     => true
+);
 
 /**
  * Sponsorship tiers

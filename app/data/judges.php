@@ -31,9 +31,9 @@ $judges[] = array(
 );
 $judges[] = array(
   'Name'    => 'Phillip Lan',
-  'Bio'     => 'Head of Digital Marketing Management & Strategy for a MAJOR local winery.',
+  'Bio'     => 'Head of Digital Marketing Management & Strategy for E&J Gallo Winery.',
   'picture' => 'PhillipLan.jpg',
-  'sponsorID' => 9999
+  'sponsorID' => 93
 );
 
 return $judges;
