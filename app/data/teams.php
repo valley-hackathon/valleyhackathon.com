@@ -24,7 +24,7 @@ $teams[] = array(
 $teams[] = array(
   'Name'       => 'Team 4',
   'Frameworks' => '',
-  'Members'    => 'Mat Wood<br>Brian Blocher<br>James Williams',
+  'Members'    => 'Mat Wood<br>Brian Blocher<br>James Williams<br>Brandon Risell',
   'County'     => 'Tuolumne'
 );
 $teams[] = array(
