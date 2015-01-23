@@ -20,7 +20,7 @@
       <br>
       {% if judge.sponsorID != 9999 %}
       {% set sponsor = sponsors[judge.sponsorID] %}
-      <a href="http://{{sponsor.URL}}">
+      <a href="{{sponsor.URL}}">
         <img src="img/{{sponsor.Logo}}" alt="{{sponsor.Name}}" class="maxWidth" />
       </a>
       {% endif %}
