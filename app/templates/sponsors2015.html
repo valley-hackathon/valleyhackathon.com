@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <div class="heading_dots hide-for-small">
         <h1 class="heading_supersize">
-          <span class="heading_center_bg">Sponsors</span>
+          <span class="heading_center_bg">2015 Sponsors</span>
         </h1>
       </div>
     </div>
@@ -11,7 +11,7 @@
   <div class="row">
     <div class="col-md-8">
     {% set level='' %}
-    {% for sponsor in sponsors2016 if sponsor.Level %}
+    {% for sponsor in sponsors if sponsor.Level %}
       {% if sponsor.Level != level %}
         {% set level=sponsor.Level %}
       <div class="row">
@@ -21,7 +21,7 @@
       <div class="row sponsor">
         <div class="col-md-3">
           <a href="{{sponsor.URL}}">
-            <img src="img/{{sponsor.Logo}}" alt="{{sponsor.Name}}" class="maxWidth" />
+            <img src="../img/{{sponsor.Logo}}" alt="{{sponsor.Name}}" class="maxWidth" />
           </a>
         </div>
         <div class="col-md-4">
@@ -32,14 +32,13 @@
         </div>
       </div>
     {% endfor %}
-<!--
       <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Mentors</span></h2></div>
       <p>The guys from Stickman ventures (including a Google Expert on Wearables) will be at the event to assist teams and mentor contestents.</p>
       {% set sponsor = sponsors[92] %}
       <div class="row sponsor">
         <div class="col-md-3">
           <a href="http://{{sponsor.URL}}">
-            <img src="img/{{sponsor.Logo}}" alt="{{sponsor.Name}}" class="maxWidth" />
+            <img src="../img/{{sponsor.Logo}}" alt="{{sponsor.Name}}" class="maxWidth" />
           </a>
         </div>
         <div class="col-md-4">
@@ -49,21 +48,17 @@
           {{sponsor.Text|raw}}
         </div>
       </div>
--->
     </div>
 
 
     <div class="col-md-4">
-      <h2>Interested in Sponsoring?</h2>
-      <small><a href="/sponsors/2015">Our 2015 Sponsors</a></small>
-      <p class="basic_text">We are were looking for our sponsors to come from a mix of local companies that are interested in technology and in meeting some of the best programmers, graphic artists, and other technical folk that the valley has to offer.  The Valley Hackathon is seeking to incubate new ventures and support existing ones by creating a focal point in the valley for technologists and business to converge.</p>
-      <p class="basic_text">All sponsors will have their logo and tagline on the Valley Hackathon website along with a link to their website.  Logos from companies will be used on published literature and banners.  Each sponsor will also be introduced at the welcome event and if the sponsor (at the Gold level or above) is offering a special prize then the sponsor will be able to define the parameters for winning the prize to the contestants.</p>
-      <p> For example, a prize could go to the most creative design from a certain county, the best use of mapping technology, or simply to the contestant or team a judge feels is most worthy of their prize.</p>
-      <p class="basic_text">See below for sponsorship level details.</p>
+      <h2>We love our sponsors!</h2>
+      <p class="basic_text">We had a great mix of sponsors for the 2015 event and want to honor each of them for their contribution.  Rethink DB was incredible as a sponsor, legos, extra prize money, what was not to love about them?</p>
+      <p class="basic_text">See below for 2015 sponsorship level details.</p>
     </div>
   </div>
   <div class="row sponsorLevels">
-    {% for tier in sponsorship2016 %}
+    {% for tier in sponsorship %}
     <div class="col-sm-3 col-md-3">
       <div class="well">
         <h2 class="{{tier.Name}} hX">{{tier.Name}}</h2>

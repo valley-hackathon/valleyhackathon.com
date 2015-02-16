@@ -1,0 +1,65 @@
+{% include 'header.html' %}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="heading_dots hide-for-small">
+        <h1 class="heading_supersize">
+          <span class="heading_center_bg">Teams</span>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p>There is some awesome technology listed here but we are looking people who are just starting out in the tech world to participate too! <strong>We are also looking for individuals to sign up who will be able to form teams or join existing teams on the day of the event.</strong>  We want lots of folks at the event so sign up, come, and have fun! Can't think of what to do?  Check our <a href='#ideas'>project ideas list</a> below.</p>
+      <table class="table table-condensed table-striped">
+        <thead>
+          <tr>
+            <th>Team Name / Project Type</th>
+            <th>Team Members</th>
+            <th>Counties Represented</th>
+            <th>Project Link</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for t in teams %}
+          <tr>
+            <td>{{t.Name}}<br>{{t.Frameworks}}</td>
+            <td>{{t.Members|raw}}</td>
+            <td>{{t.County|raw}}</td>
+            <td>{% if t.URL %}<a href="http://{{t.URL}}">{% if t.ProjectPic %}<img class="projectImage" src="/img/project/{{t.ProjectPic}}">{% else %}{{t.Name}}{% endif %}</a>{% else %}Coming Soon{% endif %}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="heading_dots hide-for-small"><h2 class="heading_supersize"><span class="heading_center_bg">Individuals</span></h2></div>
+      We currently have seven individuals signed up for the event.  Some of the skill sets are listed below.  We will be forming teams at the event.
+      <ul>
+        <li>Ruby-on-Rails</li>
+        <li>Java, Angular.js, MySQL</li>
+        <li>PHP, MySQL, Objective-C</li>
+        <li>Node, ASP.net MVC, GO, Python</li>
+        <li>PHP, Python, Javascript</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="ideas" class="heading_dots hide-for-small"><h2 id="ideas" class="heading_supersize"><span class="heading_center_bg">Project Ideas</span></h2></div>
+        <ul>
+          <li>Since we recently had a great local meetup on building extensions for Chrome, this is a great starting point for project ideas.  The code lab details can be found <a href="https://goo.gl/fSXoBR">here.</a>
+            <ul>
+              <li>Chrome extension to identify addresses on a page and then if one is selected open up a Google map of that location.</li>
+              <li>Chrome extension to create a simple chat system using Firebase.</li>
+              <li>Using the Weather Underground API, create a Chrome extension for pulling the current local weather conditions.</li>
+            </ul>
+          </li>
+          <li>Got a project idea you want to share, email it to Nathan@Inventaweb.net.</li>
+        </ul>
+    </div>
+  </div>
+{% set form=1 %}
+{% include 'footer.html' %}

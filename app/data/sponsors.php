@@ -3,6 +3,26 @@
 /**
  * Sponsors
  */
+
+$data['sponsors2016'][0] = array(
+  'Level'       => 'Founding Sponsor',
+  'Name'        => 'GeoStrategies',
+  'URL'         => 'http://geostrategies.com/',
+  'Logo'        => 'geostrategies.jpg',
+  'Description' => 'Tactical Strategies. Actionable Intelligence.',
+  'Text'        => 'GeoStrategies is the founding sponsor. They are giving us food and a place to hold the contest. Without them there would be no contest. These guys are awesome!'
+);
+$data['sponsors2016'][21] = array(
+  'Level'       => 'Gold Sponsor',
+  'Name'        => 'Inventaweb',
+  'URL'         => 'http://inventaweb.net/',
+  'Logo'        => 'inventaweb.png',
+  'Description' => 'Inventing your next website.',
+  'Text'        => 'Inventaweb is building this nifty website for the event. Keep looking back here for more information and after the event for links to several of the projects!'
+);
+
+
+
 $data['sponsors'][0] = array(
   'Level'       => 'Founding Sponsor',
   'Name'        => 'GeoStrategies',
@@ -178,6 +198,28 @@ $data['sponsorship'][] = array(
 $data['sponsorship'][] = array(
  'Name'         => 'Platinum',
  'Commitment'   => '$2000',
+ 'Introduction' => 'up to one minute',
+ 'Surprize'     => 'Platinum Sponsors can sponsor a surprise for the event.  Call us for more details.'
+);
+
+$data['sponsorship2016'][] = array(
+ 'Name'         => 'Bronze',
+ 'Commitment'   => '$TBD',
+ 'Introduction' => 'brief'
+);
+$data['sponsorship2016'][] = array(
+ 'Name'         => 'Silver',
+ 'Commitment'   => '$TBD',
+ 'Introduction' => '30 seconds'
+);
+$data['sponsorship2016'][] = array(
+ 'Name'         => 'Gold',
+ 'Commitment'   => '$TBD',
+ 'Introduction' => 'up to one minute'
+);
+$data['sponsorship2016'][] = array(
+ 'Name'         => 'Platinum',
+ 'Commitment'   => '$TBD',
  'Introduction' => 'up to one minute',
  'Surprize'     => 'Platinum Sponsors can sponsor a surprise for the event.  Call us for more details.'
 );

@@ -15,14 +15,6 @@ $judges[] = array(
   'picture' => 'ScottSmith.jpg',
   'sponsorID' => 30
 );
-/*
-$judges[] = array(
-  'Name'    => 'Rick Swanson',
-  'Bio'     => 'Chairman of the Board at Associated Feed and Supply, Rick has been an early adopter of technology his entire life.',
-  'picture' => 'RickSwanson.jpg',
-  'sponsorID' => 51
-);
-*/
 $judges[] = array(
   'Name'    => 'Simeon Franklin',
   'Bio'     => 'Technical Instructor at Twitter, Simeon is the founder of the Modesto Scripting Language Meetup.',

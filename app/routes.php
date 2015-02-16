@@ -44,6 +44,16 @@ App::get('/sponsors', function () use($app) {
   $app->render('sponsors.html');
 });
 
+App::get('/sponsors/2015', function () use($app) {
+  View::setData(array(
+    'title'       => 'Sponsors of 2015 Valley Hackathon',
+    'description' => 'Sponsors of 2015 Valley Hackathon are all local companies involved in technology in one way or another.',
+    'keywords'    => ['Hackathon sponsors', 'Valley Hackathon 2015 sponsors', 'Central Valley hackathon sponsors'],
+    'h1'          => 'Sponsors of the 2015 Valley Hackathon'
+  ));
+  $app->render('sponsors2015.html');
+});
+
 App::get('/judges', function () use($app) {
   View::setData(array(
     'title'       => 'Judges of Valley Hackathon',
@@ -52,6 +62,16 @@ App::get('/judges', function () use($app) {
     'h1'          => 'Judges of the Valley Hackathon'
   ));
   $app->render('judges.html');
+});
+
+App::get('/judges/2015', function () use($app) {
+  View::setData(array(
+    'title'       => 'Judges of 2015 Valley Hackathon',
+    'description' => 'Judges of 2015 Valley Hackathon are an eclectic group of technologists, business leaders, and design experts.',
+    'keywords'    => ['Hackathon judges 2015', 'Valley Hackathon judges', 'Central Valley hackathon judges'],
+    'h1'          => 'Judges of the 2015 Valley Hackathon'
+  ));
+  $app->render('judges2015.html');
 });
 
 App::get('/signup', function () use($app) {
@@ -82,6 +102,16 @@ App::get('/teams', function () use($app) {
   $app->render('teams.html');
 });
 
+App::get('/teams/2015', function () use($app) {
+  View::setData(array(
+    'title'       => '2015 Valley Hackathon Teams',
+    'description' => 'Check out the 2015 teams for the Valley Hackathon',
+    'keywords'    => ['2015 Hackathon teams', 'Valley Hackathon teams', 'Central Valley hackathon teams'],
+    'h1'          => '2015 Teams'
+  ));
+  $app->render('teams2015.html');
+});
+
 App::get('/prizes', function () use($app) {
   View::setData(array(
     'title'       => 'Valley Hackathon Prizes',
@@ -90,6 +120,16 @@ App::get('/prizes', function () use($app) {
     'h1'          => 'Current Prizes'
   ));
   $app->render('prizes.html');
+});
+
+App::get('/prizes/2015', function () use($app) {
+  View::setData(array(
+    'title'       => '2015 Valley Hackathon Prizes',
+    'description' => 'Check out the prizes for the 2015 Valley Hackathon',
+    'keywords'    => ['Hackathon prizes', 'Valley Hackathon prizes 2015', 'Central Valley hackathon prizes'],
+    'h1'          => '2015 Prizes'
+  ));
+  $app->render('prizes2015.html');
 });
 
 $app->post('/register', function () use($app) {
