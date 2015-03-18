@@ -33,6 +33,9 @@ $teams[] = array(
 );
 $teams[] = array(
   'Name'       => 'Politisway'
+  'Members'    => '',
+  'County'     => 'Fresno',
+  'Description'=> '',
 );
 $teams[] = array(
   'Name'       => 'Guinea Pigs',
