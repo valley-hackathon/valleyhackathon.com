@@ -26,8 +26,8 @@
             <td>{{t.Name}}<br>{{t.Frameworks}}</td>
             <td>{{t.Members|raw}}</td>
             <td>{{t.County|raw}}</td>
-            <td>{% if t.LiveSite %}<a href="http://{{t.LiveSite}}">{% if t.ProjectPic %}<img class="projectImage" src="/img/project/{{t.ProjectPic}}">{% else %}{{t.Name}}{% endif %}</a>{% else %}Coming Soon{% endif %}<br>
-                {% if t.Video %}<a href="{{t.Video}}">Presentation Video</a>{% else %}Video Coming Soon{% endif %}
+            <td>{% if t.LiveSite %}<a href="http://{{t.LiveSite}}">{% if t.ProjectPic %}<img class="projectImage" src="/img/project/{{t.ProjectPic}}">{% else %}{{t.Name}}{% endif %}</a><br>{% endif %}
+                {% if t.Video %}<a href="{{t.Video}}">Presentation Video</a>{% else %}{% if t.Present %}Video Coming Soon{% endif %}{% endif %}
             </td>
           </tr>
         {% endfor %}

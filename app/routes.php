@@ -24,6 +24,16 @@ App::get('/', function () use($app) {
   $app->render('index.html');
 });
 
+App::get('/minihack', function () use($app) {
+  View::setData(array(
+    'title'       => 'About Valley Hackathon - Mini-Hack taking place in Modesto, CA in June 2015',
+    'description' => 'Find out more details about the Valley Hackathon Mini-Hack',
+    'keywords'    => ['About hackathon', 'About Valley Hackathon', 'About Central Valley hackathon'],
+    'h1'          => 'About the Valley Hackathon Mini-Hack'
+  ));
+  $app->render('minihack.html');
+});
+
 App::get('/about', function () use($app) {
   View::setData(array(
     'title'       => 'About Valley Hackathon',
