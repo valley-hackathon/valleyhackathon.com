@@ -17,7 +17,7 @@
             <th>Team Name / Project Type</th>
             <th>Team Members</th>
             <th>Counties Represented</th>
-            <th>Project Link</th>
+            <th>Project Info</th>
           </tr>
         </thead>
         <tbody>
@@ -26,7 +26,9 @@
             <td>{{t.Name}}<br>{{t.Frameworks}}</td>
             <td>{{t.Members|raw}}</td>
             <td>{{t.County|raw}}</td>
-            <td>{% if t.URL %}<a href="http://{{t.URL}}">{% if t.ProjectPic %}<img class="projectImage" src="/img/project/{{t.ProjectPic}}">{% else %}{{t.Name}}{% endif %}</a>{% else %}Coming Soon{% endif %}</td>
+            <td>{% if t.LiveSite %}<a href="http://{{t.LiveSite}}">{% if t.ProjectPic %}<img class="projectImage" src="/img/project/{{t.ProjectPic}}">{% else %}{{t.Name}}{% endif %}</a>{% else %}Coming Soon{% endif %}<br>
+                {% if t.Video %}<a href="{{t.Video}}">Presentation Video</a>{% else %}Video Coming Soon{% endif %}
+            </td>
           </tr>
         {% endfor %}
         </tbody>

@@ -13,12 +13,13 @@ $teams[] = array(
   'ReThinkDB'  => true
 );
 $teams[] = array(
-  'Name'       => 'KinectaCorn',
+  'Name'       => 'Kinect-a-Corn',
   'Frameworks' => 'Java, Python, PHP',
   'Members'    => 'Brandon Halpin<br>Bryan Potts<br>Michael Schilber<br>Eric Greenberg',
   'County'     => 'Stanislaus',
   'Description'=> 'The KinectaCorn project used the OpenNI and NITE libraries (Java) to detect user gestures with a Microsoft Kinect. The gestures were used as triggers and were mapped to different audio sequences and patches created using the ChucK music programming language.  http://chuck.cs.princeton.edu/',
-  'Place'      => 'Second'
+  'Place'      => 'Second',
+  'Video'      => 'https://www.youtube.com/watch?v=hEZKV2T3Es0'
 );
 $teams[] = array(
   'Name'       => 'Train Tracker',
@@ -32,10 +33,10 @@ $teams[] = array(
   'ReThinkDB'  => true
 );
 $teams[] = array(
-  'Name'       => 'Politisway'
+  'Name'       => 'Politisway',
   'Members'    => '',
   'County'     => 'Fresno',
-  'Description'=> '',
+  'Description'=> ''
 );
 $teams[] = array(
   'Name'       => 'Guinea Pigs',
