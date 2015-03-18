@@ -217,7 +217,7 @@ h2.level {
  * Schedule table
  */
 .schedule th {
-  padding-bottom:7px
+  padding-bottom:7px;
 }
 
 .schedule th:after {
